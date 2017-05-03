@@ -1,0 +1,2283 @@
+html, body {
+	height: 100%;
+}
+
+html body {
+    font-family: 'Alef';font-size: 14px;	
+}
+
+body .spacer {
+	height: 8.4%;
+}
+
+body > .container { /* Changed 20/02/17 ||||||||||||| Amended on 08/03/17 AM to affect only .containers that are direct children of body (done as homepage HTML structure is different to the rest of the site). */
+	min-height: 90%;
+	padding: 10vh 0 0 0; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 07/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from 9vh on 08/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+body .container { /* ~~~~~~~~~~~~~~~~~~~~~~ Added on 08/03/17 as container elements share some values, even when the HTML structure differs. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	display: flex;
+}
+
+.home .container {
+	height: 100%;
+}
+
+.woocommerce-cart body .container { /* ~~~~~~~~~~~~~~~~ Added 27/02/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	min-height: 90%;
+	padding: 0;
+	display: flex;
+}
+
+body .container .row { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 20/02/17 */
+	width: 100%;
+	margin: 0;
+}
+
+body .navbar .container-fluid, body .navbar .container-fluid .container-header {
+	height:100%;
+}
+
+
+/* Added 20/02/17 PM */
+.copyright .container .row {
+	margin: 0;
+}
+
+.woocommerce-page .woocommerce {
+	flex-basis: 75%;
+	margin: auto;
+}
+
+.woocommerce-cart .woocommerce { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 28/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	flex-basis: 100%;
+	margin: auto;
+}
+
+.woocommerce-account .container .row, .woocommerce-account .container .col-md-12, .woocommerce-account .container .content, .woocommerce-account .container .page, .single-product .row, .single-product .content,
+.woocommerce-cart .container .row, .woocommerce-cart .container .col-md-12, .woocommerce-cart .container .content, .woocommerce-cart .container .page { /* Added 21/02/17 AM. ||| single-product included 23/02/17 AM. ||| woocommerce cart added 27/02/17 AM*/
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.woocommerce-account .container .row { /* ~~~~~~~~~~~~~~~~~~~~~ Added on 08/03/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	padding: 5vh;
+}
+
+.woocommerce .content { /* Added 21/02/17 AM */
+	padding: 2vh 5%; /* pixels used as padding/margin top/bottom percentages aren't fully compatible with all web browsers when used with flexbox. */
+		                     /* VALUES CHANGED FROM PX TO VH ON 28/02/17 AS THEY'RE A RESPONSIVE UNIT THAT'S COMPATIBLE W/ FLEXBOX.                        */
+							 /* CHANGED FROM 5vh 5% 5vh 5% ON 27/03/17                  																   */
+}
+
+.woocommerce-ordering {
+	order: 2;
+}
+
+.products {
+	order: 1;
+	width: 100%; /* Added 21/02/17 AM ||| CHANGED FROM 85% 28/02/17 AM */
+	display: flex; /* ~~~~~~~~~~~~~~~~~~*/
+	flex-wrap: wrap; /* Added 27/02/17 */
+}
+
+.products .product {            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 28/02/17 AM. [INCLUDE MEDIA QUERY] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	width: 20% !important;	    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	margin: 2% !important;  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	padding-bottom: 2vh !important; /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Line Added 07/03/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}                               /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.spacer {
+	display: none;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.home .content, .home .spacer {
+	display: none;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+#welcome {
+	height: 90%;
+	padding: 10vh 0 0 0; /* ~~~~~~~~~~~~~~~~ Amended from padding: 15% 0 on 07/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~  Amended from 9vh 0 on 08/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~*/
+	display: flex; /* ~~~~~~~~~~~~~~~~~~~~~~ Added on 08/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.copyright {
+	height: 10%;
+	padding: 1% 0;
+}
+
+.navbar {
+	background-color: black !important;
+	height: 10vh; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Amended to flex-friendly vh units on 07/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from 9vh on 08/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.navbar .container-header, .copyright .container-footer { /* Changed 20/02/17 */
+	width: 100%;
+	display: flex;
+	padding-right: 0;
+}
+
+.container-footer .row { /* Added 20/02/17 */
+	margin: auto;
+}
+
+.navbar-header {
+	flex: 1;
+	display: flex;
+}
+
+.navbar-header, #meta-container { /* ~~~~~~~~~~~~~~~~~~~~~~ CHANGED FROM .navbar-header #cart-container ON 31/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	height: 100%;
+}
+
+.navbar-header h1 {
+	flex: 1;
+	display: flex;
+}
+
+.navbar .container-fluid { /* ~~~~~~~~~~~~~~~~~~~~ Added 21/02/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	padding: 0;
+}
+
+.navbar-brand {
+	margin: auto !important;
+	padding: 0 !important;
+}
+
+.lead {
+	padding: 0 12%;
+	margin-bottom: 1vh !important;
+} /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+												/*~~~~~~~~~~~~~~~~~~~~~~ REMOVED min-width MEDIA QUERY AS IT WAS REDUNDANT 07/03/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	#navbar-ex-collapse-child {
+		flex: 11;
+		display: flex;
+		box-sizing: border-box;
+		border-left: 1px solid white;
+		border-right: 1px solid white;
+	}
+	
+	.navbar-header .site-title {
+		order: 1;
+		flex: 2; /* ~~ Added 13/04/17 ~~~ */
+	}
+	
+	.navbar-header #navbar-ex-collapse-child {
+		order: 2;
+	}
+	
+	.navbar-header #meta-container { /* ~~~~~~~~~~~~~~~~~~~~~~ CHANGED FROM .navbar-header #cart-container ON 31/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		order: 3;
+	}
+	
+	#navbar-toggle-container { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 07/03/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ALL CSS .navbar-toggle STATEMENTS AMENDED TO #navbar-toggle-container 07/03/17 PM ~~~~~~~~~~~~~~~~~~~*/
+		display: none !important;
+	}
+												/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#navbar-ex-collapse-child ul li a {
+	color: white;
+}
+
+#menu-menu-1 { /* ~~~~~~~~~~~~~~~~~~~~~~ CHANGED FROM #cart-container, #menu-menu-1 ON 31/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  CHANGED FROM #meta-container, #menu-menu-1 on 13/04/17 */
+	flex: 2;
+	display: flex;
+}
+
+#meta-container { /* ~~ Added 13/04/17 ~~~ */
+	flex: 2;
+	display: flex;
+}
+
+#cart-container, #meta-container > li { /* ~~~~~~~~~~~~~~~~~~~~~~ CHANGED FROM .navbar-header #cart-container ON 31/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	display: flex;
+	flex: 1;
+}
+
+#meta-container li { /* ~~~~~~~~~~~~~~~~~~~~~~ ADDED ON 31/03/17  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	margin: auto;
+	list-style: none; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+#meta-container li a {
+	color: white;
+	margin: auto;
+	border: 0 !important;
+}
+
+#cart-container {
+	top: 10vh;
+}
+
+#cart-container #cart-contents {
+	flex-basis: 80%;
+	margin: auto auto;
+	display: flex;
+	color: white;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+#cart-container #cart-contents:hover {
+	color: red;
+}
+
+#cart-container #cart-contents span {
+	margin: auto auto;
+
+}
+
+#cart-container #cart-contents #subtotal {
+
+}
+
+#cart-container #cart-contents #cart-icon {
+	font-size: 30px !important;
+}
+
+#cart-container #cart-contents #count {
+	color: grey;
+}
+
+#menu-menu-1 li {
+	flex: 1;
+	margin: auto 0;
+	text-align: center
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+	background-color: transparent;
+	border-color: red !important;
+}
+
+.btn-primary {
+	background-color: red !important;
+	border-color: red !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+	background-color: #890909 !important;
+	border-color: #890909 !important;
+}
+
+@media screen and (max-width: 801px) {
+	/* navbar-ex-collapse-child & #navbar-ex-collapse-child.collapse-child.collapse.in altered to override default displays set earlier on in CSS file. 07/03/17 */
+	#navbar-ex-collapse-child {
+		display: none; 
+		position: fixed; /* ~~~~~~~~~~~~~~~~~~~~~~ Added 08/03/17 AM to stretch menu over screen. ~~~~~~~~~~~~~~~~~~~~~~~~ */
+		width: 100%;     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		height: 100%;    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		left: 0px;       /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		z-index: 0;      /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		border-left: 0;  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		border-right: 0; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	}
+	
+	#navbar-ex-collapse-child.collapse-child.collapse.in { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 28/02/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		display:flex;
+		flex: 1; /* ~~~~~~~~~~~~~~~~~~~~~~ Added 14/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		background-color: black;
+	}
+	
+	#cart-container, #menu-menu-1 {
+		flex-wrap: wrap; /* ~~~~~~~~~~~~~~~~~ Added 28/02/17 ~~~~~~~~~~~~~~~~~~~~~~~~ */
+		flex-direction: column; /* ~~~~~~~~~~~ Added 12/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~ */
+	}
+	
+	.container-header #navbar-ex-collapse-child {
+		height: 100%;
+	}
+	
+	#menu-menu-1 li {
+		/* flex-basis: 100%; 																																			   ---- REMOVED ON 12/04/17 */
+		/* height: 16.67%; /* ~~~~~~~~~~~~~~~~~~ Changed from 100% on 08/03/17 AM. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from 20% on 14/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~   ---- REMOVED ON 12/04/17 */
+		background-color: black;
+		margin: auto;
+		display: flex;
+		width: 100%;
+	}
+	
+
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 01/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	.navbar .navbar-header {
+		flex-wrap: wrap;
+	}
+
+	.container-header .navbar-header, .container-header #navbar-ex-collapse-child {
+		flex-basis: 100%
+	}
+	
+	.navbar-default li a:hover, .navbar-default .navbar-nav > li > a:hover {
+		border-bottom: 2px solid;
+	}
+	
+	#navbar-ex-collapse-child #menu-menu-1 li a {
+		flex-direction: column;
+		flex: 1;
+		justify-content: center;
+		display: flex;
+	}
+	
+	#navbar-ex-collapse-child #menu-menu-1 li {
+		border-bottom: 1px solid #292929;		
+	}
+	
+	#navbar-ex-collapse-child #menu-menu-1 li:last-of-type {
+		border-bottom: 0;
+	}
+	
+	.products .product {            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 07/03/17 AM. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		width: 40% !important;	    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		margin: 5% auto !important;  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	}  
+
+	#navbar-toggle-container { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 07/03/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		display: flex !important;
+		flex: 1;
+		z-index: 1; /* ~~~~~~~~~~~~~~~ Added 08/03/17 AM ~~~~~~~~~~~~~~~~~~~~ */
+	}
+	
+	#cart-container { 
+		position: fixed;
+		z-index: -1;
+		left: 0;
+		width: 100%;
+		border: 1px solid black;
+		background-color: #c5c57c;
+		flex-direction: row;
+	}
+	
+	#cart-container #cart-contents {
+		flex-basis: 100%;
+	}
+	
+	#cart-container #cart-contents #cart-icon {
+		margin: 0 0 0 auto;
+	}
+	
+	#cart-container #cart-contents #subtotal {
+		margin: auto 5vw;
+	}
+	
+	#cart-container #cart-contents #count {
+		margin: auto auto auto 0;
+	}
+	
+	
+	#meta-container {	/* ~~~~~~~~~~~~~~~ Added 13/04/17 AM ~~~~~~~~~~~~~~~~~~~~ */
+		flex: 1 !important;
+	}
+	
+	#navbar-toggle-container .navbar-toggle {
+		margin: auto;
+		/* display: flex !important; ~~~~~~~~~~~~~~~~~~~ 10/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~ */
+		display: block;
+	}
+	
+	.woocommerce .login { /* ~~~~~~~~~~~~~~~ Added 08/03/17 AM ~~~~~~~~~~~~~~~~~~~~ */
+		font-size: 12px;
+	}
+	
+	.form-row { /* ~~~~~~~~~~~~~~~ Added 08/03/17 PM ~~~~~~~~~~~~~~~~~~~~ */
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.woocommerce-Button { /* ~~~~~~~~~~~~~~~ Added 08/03/17 PM ~~~~~~~~~~~~~~~~~~~~ */
+		flex-basis: 100%;
+		padding: 2vh !important;
+	}
+	
+	.woocommerce-account .button { /* ~~~~~~~~~~~~~~~~~~~~~~ Added 05/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~ */
+		padding: 2vh !important; 
+	}
+	
+	.form-row .inline { /* ~~~~~~~~~~~~~~~ Added 08/03/17 PM ~~~~~~~~~~~~~~~~~~~~ */
+		flex-basis: 100%;
+		text-align: center;
+		padding-top: 2vh;
+	}
+	
+	#meta-subContainer { 				/* ~~~~~~~~~~~~~~ Added 14/04/17 ~~~~~~~~~~~~~~~~ */ 
+		display: block; 				/* ~											~ */
+		height: 33vh; 					/* ~											~ */
+	} 									/* ~											~ */
+										/* ~											~ */
+	#meta-subContainer li {				/* ~											~ */
+		height: 50% !important;			/* ~											~ */ 
+	}									/* ~											~ */ 
+										/* ~											~ */ 
+	#meta-container.collapsedSmall {	/* ~											~ */ 
+		position: relative; 	    	/* ~											~ */ 
+	}							   		/* ~											~ */ 
+										/* ~											~ */ 
+	#meta-subContainer.dropped {	    /* ~											~ */ 
+		position: absolute;		   		/* ~											~ */ 
+		display: block !important;  	/* ~											~ */ 
+		top: 100%;				    	/* ~											~ */ 
+	}							   		/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+	
+	.woocommerce-LostPassword { /* ~~~~~~~~~~~~~~~ Added 08/03/17 PM ~~~~~~~~~~~~~~~~~~~~ */
+		text-align: center;
+	}
+	
+	.woocommerce .product-remove a.remove {
+		border: 1px solid red;
+		padding: 2%;
+		height: auto;
+		width: auto;
+		border-radius: 4px;
+		background-color: red;
+		color: white !important;
+	}
+	
+	.woocommerce .product-remove a.remove:hover {
+		background-color: #890909;
+		border-color: #890909;
+	}
+
+	/* |||||||||||||||| ADDED 13/03/17 |||||||||||||||||| */
+	
+	.entry #contact-main-content #contact-form2 {
+		flex-basis: 100% !important;
+	}
+	
+	.entry #contact-side-content {
+		display: none;
+	}
+	
+	.entry #contact-main-content {
+		flex-basis: 100% !important;
+	}
+	
+	/* ||||||||||||||||||||||||||||||||||||||||||||||||| */
+	
+	#menu-item-231 {
+		display: flex;
+		flex: 1;
+	}
+	
+	/* ~~~~~~~~~~~~~~~~~~ Added 30/03/17 ~~~~~~~~~~~~~~~~~~~~~ */
+	.woocommerce-checkout .lost_password {
+		display: flex;
+	}
+	
+	.woocommerce-checkout .lost_password a {
+		margin: auto;
+	}
+	
+	.woocommerce-checkout .form-row .button {
+		width: 100%;
+		padding: 2vh 2vw;
+	}
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	
+	button.navbar-toggle.collapsed { /* ~~~~~~~~~~~~ Added 12/04/17 ~~~~~~~~~~~~~ */
+		background-color: transparent !important;
+	}
+}
+
+@media screen and (max-width: 414px) and (orientation: portrait) { /* ~~~~~~~~~~~~~~~~~~ Portrait Mobile Viewports ||| ADDED FOR SHOP PAGE 07/03/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	.products .product {            /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 28/02/17 AM. [INCLUDE MEDIA QUERY] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+			width: 100% !important;	    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+			margin: 5% auto !important;  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	}        
+	
+	.woocommerce-result-count, .woocommerce-ordering, .woocommerce-ordering .orderby { /* ~~~~~~~~~~~~~~~ Added 08/03/17 to stretch product list query form for phones ~~~~~~~~~~~~~~~~~~~~~~~ */
+		width: 100%;																   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	}																				   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+																					   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	.woocommerce-result-count, .woocommerce-ordering .orderby {						   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		text-align: center;															   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	}																				   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	
+	.woocommerce-account #billing_phone_field, .woocommerce-account #billing_email_field {
+		width: 100%;
+	}
+	
+	body #theme-my-login { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 06/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		width: 100% !important;
+	}
+	
+	.page-id-470 #registerform {
+		padding: 5% 0 !important;
+	}
+	
+	.page-id-470 #registerform p {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	
+	#theme-my-login .g-recaptcha {
+		width: 100%;
+	}
+	
+	#theme-my-login .g-recaptcha > div {
+		margin: auto;
+	}					
+
+	.page-id-470 .tml-action-links li, .page-id-470 #registerform {
+		border-radius: 0 !important;
+	}								/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	
+	/* ~~~ Added 11/04/17 ~~~ */
+	nav.navbar-fixed-top .tester {
+		flex-direction: column;
+	}
+	
+	.tester #usernameContainer {
+		text-align: center;
+		flex: 2;
+	}
+	
+	.tester #userMenuCollapse {
+		flex: 1;
+	}
+	
+	nav.navbar-fixed-top #meta-container {
+		flex: 1;
+	}
+	
+	nav.navbar-fixed-top #meta-container #login {
+		flex-direction: column;
+		margin: 0;
+	}
+	
+	nav.navbar-fixed-top #meta-container #login a {
+		margin: 0;
+	}
+	
+	nav.navbar-fixed-top .site-title {
+		flex: 2;
+	}
+	
+	navbar.navbar-fixed-top #navbar-toggle-container {
+		flex: 1;
+	}
+	
+	navbar.navbar-fixed-top .navbar-header:after {
+		flex: 0 !important;
+	}
+	
+	
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape), screen and (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) { /*  Landscape Mobile + All Tablet Viewports ||| ADDED FOR REGISTER PAGE 06/04/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	body #theme-my-login {
+		width: 75% !important;
+	}
+}
+
+.non-empty {
+	color: #d90000;
+}
+
+.active a {
+	border-bottom: 2px solid #0080ff !important;
+}
+
+.woocommerce .col-md-8 {
+	width: 100%;
+}
+
+.woocommerce .col-md-8 h3, .woocommerce .col-md-8 span, .woocommerce .col-md-8 a {
+	font-size: 18px !important;
+}
+
+.woocommerce .col-md-8 h3 {
+	text-decoration: underline;
+	color: white;
+	background-color: grey;
+}
+
+.woocommerce .col-md-8 span { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added on 27/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	color: black;
+	font-weight: bold;
+}	
+
+.woocommerce.archive .col-md-8 span { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from .woocommerce .col-md-8 span on 27/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	font-weight: bold;
+	color: white;
+	background-color: grey;
+}
+
+.woocommerce .col-md-8 a.button {
+	margin: 0 20%;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+
+input.qty {
+	width: 100% !important;
+	height: 10% !important;
+	font-size: 20px !important; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.quantity {
+	width: 100%;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+	z-index: 0;
+}
+
+#contact-form {
+	clear: both;
+	width: 40%;
+	padding: 5 5%;
+	margin: 5% 0 5% 25%;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-radius: 4px;
+	text-align: center;
+}
+
+#gmaps {
+	width: 75%;
+	padding: 5% 5%;
+	float: left;
+	box-sizing: border-box;
+	border-right: 2px solid #eeeeee;
+}
+
+#gmaps-info {
+	width: 20%;
+	float: right;
+	box-sizing: border-box;
+	border: 1px solid black;
+	text-align: center;
+	margin: 1% 5%;
+	display: inline-block;
+	border-radius: 4px;
+	position: fixed;
+}
+
+#gmaps-info h4 {
+	text-decoration: underline;
+}
+
+#contact-form div.wpcf7-form-control-wrap {
+	margin: 0 20%;
+}
+
+#gmaps-info, #contact-form {
+	background-color: #eee;
+}
+
+.wpcf7-submit {
+	width: 90%;
+	padding: 2%;
+	margin: 2% 0;
+	border-radius: 4px;
+}
+
+.wpcf7-submit:hover {
+	background-color: #a9a192;
+	color: white;
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+	font-size: 14px;
+}
+
+.navbar-collapse-child .nav > li > a:focus, .navbar-collapse-child .nav > li > a:hover {
+	background-color: rgba(238,238,238,0.25);
+}
+
+.entry {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-start; /* ~~~~~~~~~~~~~~~~~~~~~~ CHANGED FROM ALIGN-CONTENT ON 09/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	align-content: flex-start; /* ~~~~~~~~~~~~~~~~~~~~ ALIGN-CONTENT INCLUDED LATER ON ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.entry #contact-main-content {
+	display: flex;
+	flex-basis: 75%;
+	flex-wrap: wrap;
+	margin: auto auto;
+	padding-top: 0; /* ~~~~~~~~~~~~~~~~~~~ changed from 100px on 28/02/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~ changed from 10vh on 13/03/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~ Changed from 2vh on 14/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+	padding-bottom: 0; /* ~~~~~~~~~~~~~~~~~~~ changed from 40px on 28/02/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~ changed from 4vh on 14/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~ */
+	box-sizing: border-box;
+	border-right: 2px solid #000000;
+	background-color: rgba(119,119,119,0.3);
+	order: 1;
+}
+
+.entry #contact-main-content #gmaps2 {
+	flex-basis: 90%;
+	margin: auto auto;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+.entry #contact-main-content #contact-form2 {
+	flex-basis: 65%; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CHANGED FROM 65% ON 13/03/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	margin: 20px auto 0 auto; /* ############################################################################################################################## CHANGED FROM 20px auto 13/03/17 PM */
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-radius: 4px;
+	background-color: white;
+	text-align: center;
+	padding: 5% 1%;	/* ############################################################################################################################## CHANGED FROM 5% 10% 13/03/17 PM */
+	color: black !important;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.entry #contact-main-content #contact-form2 .wpcf7-form-control-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.entry #contact-main-content #contact-form2 .wpcf7-form-control-wrap input, .entry #contact-main-content #contact-form2 .wpcf7-form-control-wrap textarea  {
+	flex-basis: 100%;
+}
+
+.entry #contact-main-content #contact-form2 label {
+	width: 100%;
+}
+
+.entry #contact-main-content #contact-form2 .wpcf7-form-control-wrap .g-recaptcha {
+	/* margin: auto; ################################ 13/03/17 PM */
+}
+
+.entry #contact-main-content #contact-form2 .wpcf7-submit {
+	width: 50%;
+	background-color: red;
+	border-color: red;
+	color: white;
+}
+
+.wpcf7-submit:hover {
+	background-color: #890909 !important;
+	border-color: #890909 !important;
+}
+
+.entry #contact-main-content #contact-form2 h4 {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.wpcf7-response-output {
+	flex-basis: 100%;
+}
+
+.entry #contact-side-content {
+	background-color: #eee !important;
+	flex-basis: 25%;
+	padding-top: 5vh; /* ~~~~~~~~~~~~~~~~~~ changed from 100px on 28/02/17 PM ~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from 10vh on 13/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	font-size: 1vmin !important;
+	order: 2;
+}
+
+.entry #contact-side-content #gmaps-info2, .entry #contact-side-content #open-hours { /* Open Hours included 21/02/17 AM */
+	box-sizing: border-box;
+	border: 1px solid black;
+	margin: 0 3% 2.5% 3%;
+	padding: 0.5%;
+	width: 20%;
+	border-radius: 2px;
+	background-color: white;
+	position: absolute; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from fixed 28/02/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	text-align: center;
+}
+
+.entry #contact-side-content #open-hours { /* Added 21/02/17 AM */
+	top: 70%;
+}
+
+.container {
+	width: 100% !important;
+}
+
+.content {
+	padding: 0;
+}
+
+.col-md-12 {
+	padding: 0 !important;
+}
+
+/* ~~~~~~~~~~~~ Single Product Page CSS (Added 23/02/17) ~~~~~~~~~~~~~~~~~~~~~~ */
+
+.container { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ test ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	background-color: rgba(0,0,0,0.3);
+}
+
+.woocommerce-account .woocommerce, .woocommerce-cart .woocommerce { /* ~~~~~~~~~~~~~~~~~~~~~~~~~ ALTERED TO INCLUDE WOOCOMMERCE CART 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~ */
+	background-color: white;
+	padding: 0 2% !important; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from padding: 7% on 07/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from padding 4% on 08/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	border-radius: 4px;
+}
+
+	
+.woocommerce-account .woocommerce { 														   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 14/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	height: 100%;																	 		   /*|																										           | */
+	flex-wrap: wrap;																		   /*|																										           | */
+}																					 		   /*|																										           | */
+																							   /*|																										           | */
+.woocommerce-account .woocommerce h2, .woocommerce-account .woocommerce .login {			   /*|																										           | */
+	width: 100%;																			   /*|																										           | */
+}																							   /*|																										           | */
+																							   /*|																										           | */
+.content ul, .content li, .content blockquote {										 		   /*|																										           | */
+	margin-bottom: 5vh;                                                                        /*|								  																		           | */
+	list-style:none;																		   /*|												 														           | */
+	font-weight: 700;                                                                          /*|																										           | */
+}																							   /*|																										           | */
+																							   /*|																										           | */
+.woocommerce-account .woocommerce {															   /*|																										           | */
+	display: flex;																			   /*|																										           | */
+	flex-direction: column;																	   /*|																										           | */
+	justify-content: center;																   /*|																										           | */
+}																							   /*|																										           | */
+																							   /*|																										           | */
+.woocommerce-account.logged-in .woocommerce {												   /*|																										           | */
+	align-content: stretch;																	   /*|																										           | */
+	background-color: rgba(0,0,0,0);														   /*|																										           | */
+}																							   /*|																										           | */
+																							   /*|																										           | */
+.woocommerce .woocommerce-MyAccount-content, .woocommerce .woocommerce-MyAccount-navigation {  /*|																										           | */
+	margin: auto;																			   /*|																										           | */
+}																							   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.woocommerce .woocommerce-MyAccount-content {
+	border: 1px solid black;
+}
+
+.single-product .container, .woocommerce-account .container, .woocommerce-cart .container { /* ~~~~~~~~~~~~~~~~~~~ woocommerce cart added 27/02/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	flex-direction: column;
+}
+
+.single-product .row, .woocommerce-cart .row { /* ~~~~~~~~~~~~~~~~~~~~~~~~~ woocommerce cart added 27/02/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~ */ /* woocommerce account removed on 10/04/17 */
+	flex: 1;
+}
+
+.single-product .content {
+	margin: auto;
+	flex-basis: 100%;
+	flex-wrap: wrap;
+}
+
+.single-product .col-md-8 {
+	margin: auto;
+	display: flex;
+	height: 100%;
+}
+
+.single-product .product {
+	flex-basis: 70%;
+	display: flex;
+	justify-content: space-between; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	margin: 10px auto;
+	padding: 2%;
+	background-color: grey;
+	border-radius: 4px;
+}
+
+.single-product .content .product .images {
+	flex-basis: 50%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.single-product .product .summary { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ margin: 0 auto removed 27/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	flex-basis: 45%; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from 30% on 27/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	height: 40%;
+	background-color: white;
+	padding: 5%;
+	border-radius: 4px;
+}
+
+#shop-back {
+	flex-basis: 100%;
+	/* Removed height: 5%; for Chrome compatibility 10/04/17 */
+	display: flex;
+}
+
+#shop-back .back_button {
+	border: 1px solid red;
+	box-sizing: border-box;
+	padding: 2vh 2vw; /* Changed from 10% 2% on 10/04/17 for Chrome compatibility. */
+	border-radius: 4px;
+	background-color: red;
+	color: white;
+	text-decoration: none;
+}
+
+.single-product .content .entry-summary .single_add_to_cart_button { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	border: 1px solid red;
+	box-sizing: border-box;
+	background-color: red;
+	color: white;
+}
+
+#shop-back .back_button:hover, .single-product .content .single_add_to_cart_button:hover { /* ~~~~~~~~~~~~~~~~ .single-product .content .single_add_to_cart_button:hover added 27/03/17 ~~~~~~~~~~~~~~~~~~~ */
+	background-color: #890909 !important;
+	border-color: #890909 !important;
+}
+
+.woocommerce-message {
+	width: 100%;
+}
+
+.wc-forward {
+	margin: 0 !important;
+}
+	
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.entry > .woocommerce-message { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	/* height: 10%; ~~~ 09/03/17 PM ~~~ */
+	margin-bottom: 30% !important;
+}
+
+.woocommerce-LoopProduct-link:hover h3, .woocommerce-LoopProduct-link:hover span { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	background-color: #eee !important;
+	color: black !important;
+}
+
+.woocommerce ul.products li.product h3 {
+	text-align: center;
+	text-decoration: none;
+}
+
+.woocommerce ul.products li.product .price { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	text-align: center;
+}
+
+.woocommerce ul.products li.product .button { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	width: 100%;
+	padding: 5%;
+	font-size: 20px;
+	background-color: red;
+	border-color: red;
+}
+
+.woocommerce ul.products li.product .button:hover { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	background-color: #890909 !important;
+	border-color: #890909 !important;
+}
+
+/*.woocommerce-cart .woocommerce { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*	font-size: 15px;
+}
+
+.woocommerce-cart .product-thumbnail { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*	width: 15%;
+}
+
+#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommece-checkout table.cart img { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*	width: auto;
+}
+
+.woocommerce-cart .cart_totals h2 { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*	font-size: 15px;
+}
+*/
+.woocommerce-cart .entry { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/02/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	overflow: auto;
+	padding: 0; /* ~~~~~~~~~~~~ Changed from 100px on 28/02/17 PM ~~~~~~~~~~~~~~~~ Changed from 10vh 0 on 09/03/17 PM ~~~~~~~~~~~~~~~  */
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 28/02/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.page-id-38 .container {
+	height: 90%; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Changed from 75% on 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.page-id-38 .container .row, .page-id-38 .col-md-12, .page-id-38 .content, .page-id-38 .page, .page-id-38 .entry, .page-id-38 #contact-main-content, .page-id-38 #contact-side-content {
+	height: 100%;
+}
+
+.page-id-38 #contact-main-content {
+	overflow: scroll;
+}
+
+#gmaps-info2 p {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	margin-bottom: 1vh; /* ~~~~~~~~~~~~~~~~~~~~~~ Added 13/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+#open-hours p { /* ~~~~~~~~~~~~~~~~~~~~~~ Added 13/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	margin-bottom: 1vh;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 07/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.home .row .col-md-12 {
+	margin: auto !important;
+}
+
+.home .row .col-md-12 h1, .home .row .col-md-12 h2 {
+	margin: 0;
+}
+
+.home .row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 08/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (max-height: 799px) {
+	.navbar {
+		height: 14vh;
+	}
+	
+	#cart-container {
+		top: 14vh;
+	}
+	
+	.cart-container { /* ~~~~~~~ Added 13/04/17 ~~~~~~~ */
+		top: 14vh;
+	}
+	
+	body > .container {
+		padding-top: 14vh;
+	}
+	
+	#welcome {
+	padding-top: 14vh;
+	}
+}
+
+@media screen and (max-height: 320px) { /* Smallest Landscape Mobile Viewports. */
+	html body {
+		font-size: 12px;
+	}
+	
+	.lead p, .btn-group-lg > a.btn, a.btn-lg {
+		font-size: 14px;
+	}
+}	
+
+.woocommerce .login {
+	padding: 2%;
+	margin: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 09/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/*@media screen and (min-width : 768px) and (max-width : 1025px) and (orientation: landscape) { /* Large tablets in landscape orientation. 
+	.site-title, #meta-container {
+		flex: 2 !important;
+	}
+}*/
+
+.cart-empty {
+	margin-top: 5vh;
+}
+
+.woocommerce-cart .woocommerce {
+	margin: 0 auto !important;
+}
+
+.woocommerce { 
+	padding-top: 2% !important;
+}
+
+.return-to-shop {                          /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Mobiles/tablets only?? ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	display: flex;                         /* | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | */
+}                                          /* | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | */
+                                           /* | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | */
+.woocommerce .return-to-shop a.button {    /* | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | */
+	margin: auto;                          /* | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | */
+}                                          /* | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | */
+                                           /* | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | */
+.cart-empty {                              /* | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | */
+	text-align: center;                    /* | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ | */
+}                                          /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.woocommerce-cart .woocommerce-message {
+	margin-top: 2vh !important;
+	margin-bottom: 0 !important;
+}
+
+.woocommerce-cart .woocommerce > .woocommerce-message {
+	margin-top: 1vh !important;
+	margin-bottom: 3vh !important;
+	border-left: 1px solid grey;
+	border-bottom: 1px solid grey;
+	border-right: 1px solid grey;
+}
+
+.woocommerce-cart .woocommerce {
+	margin-top: 4vh !important;
+	margin-bottom: 4vh !important; /* ~~~~~ Added 10/03/17 ~~~~~ */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 10/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 580px) {
+	.archive .woocommerce-message {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.woocommerce .col-md-8 a.button {
+		order: 2;
+		text-align: center;
+		margin-top: 2vh !important;
+	} 
+	
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 14/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	/*#cart-container { /* ~~~~~~~~~~~~~~~~~~~~~~ CHANGED FROM #cart-container ON 31/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  MOVED TO LINE ~331 13/04/17
+		display: none !important;
+	}*/
+	
+	.site-title {
+		flex: 3 !important;
+	}
+	
+	/*.navbar-header:after {
+		  content: "" !important;
+		  display: flex !important;
+		  flex: 1 !important;
+		  order:3;
+	}*/
+	
+	.woocommerce-order-received .woocommerce {
+		margin: 0; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+		flex-basis: 100%; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+	}
+	
+	.woocommerce-order-received .woocommerce ul {
+		flex-basis: 75% !important; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+	}
+	
+	input[type=radio], #createaccount {
+		border: 0px; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+		width: 100%; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+		height: 2em; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+	}
+	
+	.woocommerce-checkout .woocommerce {
+		flex-basis: 100%; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+	}
+	
+	.woocommerce-checkout .woocommerce .woocommerce-billing-fields #billing_email_field, .woocommerce-checkout .woocommerce .woocommerce-billing-fields #billing_phone_field {
+		float: none; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+		width: 100%; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+	}	
+	
+	.woocommerce-checkout .woocommerce #customer_details {
+		padding: 0 5%; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+	}
+
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	
+	/* MEDIA */
+	.single-product .product:after {
+		content: "";
+		display: block;
+		height: 5vh; /* CHANGED FROM 35vh ON 12/04/17 */
+		width: 100%;
+	}
+
+	.single-product .content .product .entry-summary {
+		margin-top: 2%;
+	}
+
+	.single-product .content .product {
+		flex-direction: column;
+		flex-basis: 100%;
+	}
+
+	.single-product .content #shop-back .back_button {
+		flex-basis: 75%;
+		text-align: center;
+	}
+
+	.woocommerce .content {
+		padding: 2vh 0;
+	}
+
+	body.single-product .container:after {
+		height: 5vh; /* CHANGED FROM 35vh ON 12/04/17 */
+	}
+
+	.single-product .col-md-8 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.single-product .content .product .entry-summary button {
+		/*width: 100%; ---- REMOVED 0N 12/04/17 AS WIDTH TO BE SET FOR ALL VIEWPORTS. */
+	}
+
+	/* ~~~~~ */
+	
+	/* #meta-subContainer { */
+		/* display: block; */
+		/* height: 33vh; */
+	/* } */
+	
+	/* #meta-subContainer li {			/* ~~~~~~~~~~~~~~ Added 12/04/17 ~~~~~~~~~~~~~~~~ */ 
+		/* height: 50% !important;		/* ~											~ */ 
+	/* }								/* ~											~ */ 
+									/* /* ~												~ */ 
+	/* #meta-container.collapsedSmall {	/* ~											~ */ 
+		/* position: relative; 	    /* ~					MOVED	TO					~ */ 
+	/* }							    /* ~				LINE	~331				~ */ 
+									/* /* ~					14/04/17					~ */ 
+	/* #meta-subContainer.dropped {	    /* ~											~ */ 
+		/* position: absolute;		    /* ~											~ */ 
+		/* display: block !important;  /* ~												~ */ 
+		/* top: 100%;				    /* ~											~ */ 
+	/* }							    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+}	
+
+	
+.cart_item .product-thumbnail {
+	display: flex;
+}
+	
+.cart_item .product-thumbnail a {
+	flex-basis: 75%;
+	margin: auto;
+}
+
+.cart_item .product-thumbnail a img {
+	width: 20vw; /* ~~~~~~~~~~~~~~~~~ Changed from 100% on 04/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	color: black;
+	font-weight: bold;
+	width: 100%;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link {
+	flex-direction: column;
+}
+
+.content .woocommerce-MyAccount-navigation li {
+	background-color: #eee;
+	font-size: 16px; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a:hover {
+	background-color: #333333;
+	color: white;
+	text-decoration: none;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link.is-active a {
+	background-color: rgba(255,0,0, 0.7); 
+	color: #eeeeee;
+	text-shadow: -1px 0 #333333,0 1px #333333,1px 0 #333333,0 -1px #333333;
+}
+
+.woocommerce-MyAccount-content {
+	background-color: rgba(255,255,254,1);
+	color: black;
+	padding: 2%;
+	border-radius: 2px;
+}
+
+.woocommerce-MyAccount-content a {
+	color: #0080ff;
+}
+
+.woocommerce-MyAccount-content table {
+	background-color: white;
+}
+
+.woocommerce-MyAccount-content .button {
+	border: 1px solid black !important;
+}
+
+.woocommerce-account .woocommerce h2 {
+	/* ~~~~~~~~~~~~~ margin-top: 5vh removed 27/03/17 ~~~~~~~~~~~~~~ */
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 13/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#contact-main-content:before {
+  content: "";
+  display: block;
+  height: 6vh;
+  width: 100%;
+}
+
+#contact-main-content:after {
+  content: "";
+  display: block;
+  height: 6vh;
+  width: 100%;
+}
+
+.cscfForm > p, .cscfForm .control-group {
+	padding: 0 7%;
+}
+
+.cscfForm .control-group:last-of-type {
+	padding: 0;
+}
+
+.g-recaptcha {
+	display: flex;
+}
+
+.g-recaptcha > div {
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 374px) {
+	#contact-form2 {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		overflow: hidden;
+	}
+	
+	.g-recaptcha > div {
+		margin: 0;
+	}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 14/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#cscf_message {
+	resize: none;
+}
+
+#menu-item-231 {
+	display: none;
+}
+
+.woocommerce-billing-fields p {
+	font-size: 12px !important;
+}
+
+@media screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 768px)  and (orientation: portrait){ /* All Mobile Phone Viewports. */
+	.woocommerce-account .woocommerce {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	
+	.woocommerce .woocommerce-MyAccount-navigation {
+		order: 2;
+		height: auto;
+	}
+	
+	.woocommerce .woocommerce-MyAccount-content {
+		order: 1;
+	}
+	
+	.logged-in div.woocommerce {
+		padding: 0 !important;
+	}
+	
+	.logged-in .woocommerce-MyAccount-navigation ul {
+		padding-right: 0;
+	}
+	
+	.content .woocommerce-MyAccount-navigation li a {
+		padding: 3vh 0;
+	}
+	
+	.logged-in .woocommerce:before {
+		height: 10vh;
+		order: 0;
+	}
+	
+	.logged-in .woocommerce:after {
+		height: 5vh;
+		order: 3;
+	}
+	
+	.logged-in .container:after {
+		height: 2vh;
+	}
+	
+	/*.logged-in .woocommerce-MyAccount-navigation-link:before, .logged-in .woocommerce-MyAccount-navigation-link:after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2vh;
+	}*/
+	
+	.logged-in .woocommerce {
+		flex-basis: 100%;
+	}
+	
+	woocommerce-account.logged-in .container .row {
+		padding: 5vh 0;
+	}
+	
+	.woocommerce table.shop_table { /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 30/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		border-radius: 0;
+	}
+	
+	.woocommerce-order-received .woocommerce address {
+		margin-left: 3vw;
+	}
+	
+	body.woocommerce-checkout #createaccount {
+		margin-right: 2vw;
+	}
+	
+	body.woocommerce-checkout #woocommerce_eu_vat_number {
+		margin-top: 3vh;
+	}
+	
+	.logged-in #accountContainer {
+
+		flex-direction: column;
+		width: 100%;
+	}
+	
+	.woocommerce-MyAccount-content {
+		flex: 1;
+	}
+	
+	.woocommerce-MyAccount-content {
+		min-height: 20vh;
+	}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 15/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.woocommerce-MyAccount-navigation {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.woocommerce-MyAccount-navigation ul {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	padding-left: 0;
+	padding-right: 20%;
+}
+
+.woocommerce-MyAccount-navigation-link {
+	border: 1px solid black;
+	display: flex;
+	align-items: flex-start;
+	flex: 1;
+	margin: 0 !important; /* Conflicts with line 650. */
+}
+
+.woocommerce-MyAccount-navigation-link a {
+	margin: auto;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 16/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body.order-recieved .col-md-12 {
+	height: 100%;
+	display: flex;
+}
+
+body.order-recieved .content {
+	flex-basis: 75%;
+	margin: auto;
+	background-color: white;
+	padding: 4% 0;
+	border-radius: 4px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 23/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.woocommerce-order-received .entry:before, .woocommerce-order-received .entry:after {
+	content: "";
+	display: block;
+	height: 5vh;
+	width: 100%;
+}
+
+.woocommerce-order-received .woocommerce:before, .woocommerce-order-received .woocommerce:after {
+	content: "";
+	display: block;
+	height: 2vh;
+	width: 100%;	
+}
+
+.woocommerce-order-received .woocommerce {
+	background-color: white;
+	padding: 5%;
+	display: flex; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+	flex-wrap: wrap; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.woocommerce-order-received .woocommerce .woocommerce-thankyou-order-received {
+	padding-top: 4%;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	flex-basis: 100%; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+	text-align: center; /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.woocommerce-order-received .woocommerce address {
+	padding-bottom: 4%;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 24/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.woocommerce-order-received .woocommerce ul {
+	flex-basis: 50%;
+	margin: auto;
+	text-align: center;
+	padding: 0;
+	display: flex;
+}
+
+.woocommerce-order-received .woocommerce .order_details li {
+	/* padding: 0 0 5vh 0; REMOVED 29/03/17 ~~~~~~~~~~~~~~~ */
+	margin: auto;
+	flex: 1; /* ~~~~~~~~~~~~~~~~~~~~ Added 29/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.woocommerce-order-received .woocommerce h2 {
+	flex-basis: 100%;
+}
+
+.form-row.place-order {
+	margin-bottom: 5vh !important;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 27/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.single-product .contact {
+	align-content: flex-start;
+}
+
+.single-product .content #shop-back {
+	margin-bottom: 2%;
+}
+
+.single-product .content #shop-back .back_button {
+	margin-left: 15%;
+}
+
+.single-product .content .product .entry-summary {
+	height: 100%;
+}
+
+.woocommerce.single-product .entry-summary .cart div.quantity {
+	margin-bottom: 5%;
+}
+
+.single-product .container:after {
+	content: "";
+	display: block;
+	height: 10vh;
+	width: 100%;
+}
+
+.single-product div[itemprop="description"] {
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 2%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+.single-product div[itemprop="description"] ul {
+	padding: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 28/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (min-width : 600px) and (max-width : 1024px) { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FOR WIDER MOBILE/TABLET VIEWPORTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	.single-product .content #shop-back a.back_button {
+		margin-left: 2%;
+	}
+
+	.single-product .product {
+		flex-basis: 100%;
+		border-radius: 0;
+	}
+
+	.single-product .content {
+		padding: 2vh 0;
+	}
+
+	.single-product .col-md-8 {
+		padding: 0;
+	}
+
+	.single-product .single_add_to_cart_button {
+		width: 100%;
+	}
+
+	body.single-product .container:after {
+		height: 20vh;
+	}
+
+}
+
+@media screen and (min-width : 320px) and (max-width : 1024px) { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FOR ALL MOBILE/TABLET VIEWPORTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	.single-product .single_add_to_cart_button {
+		padding: 7% !important;
+	}
+	.woocommerce-customer-details, .woocommerce-order-details, .addresses {
+		padding: 0 !important;
+	}
+	
+	#wp-submit { /* ~~~~~~~~~~~~~ Added 06/04/17 ~~~~~~~~~~~~~~ */
+		padding: 3vh 12vw !important;
+	}
+}
+
+@mediamedia screen and (max-width : 414px) {
+	.woocommerce-account .woocommerce {
+		flex-basis: 100%;
+		border-radius: 0;
+	}
+	
+	.woocommerce-account .container div.row {
+		padding: 5vh 0;
+	}
+}
+
+.woocommerce-cart .woocommerce:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2vh;
+}
+
+.woocommece-checkout .blockUI {
+	width: 100vw !important;
+	height: 100vh !important;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 29/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.woocommerce-order-received header.title {
+	width: 100%;
+}
+
+.woocommerce-order-received .woocommerce:before {
+	background-color: red;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.woocommerce-order-received .woocommerce-thankyou-order-received {
+	text-decoration: none;
+	background-color: red;
+	color: white;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	font-size: 25px !important;
+	text-shadow: 2px 2px black;
+}
+
+.woocommerce-order-received .order_details {
+	min-height: 5vh;
+	border: 1px solid;
+}
+
+.woocommerce-order-received #instruction-container {
+	margin-top: 4vh;
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.woocommerce-order-received #instruction-container p {
+	background-color: black;
+	color: white;
+	font-size: 18px;
+	font-weight: normal !important;
+	border: 1px solid black;
+	width: 85%;
+	margin: auto;
+	border-radius: 2px;
+	padding: 0 2vw;
+}
+
+.woocommerce-order-received #instruction-container:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4vh;
+}
+
+.woocommerce-order-received #instruction-container p:before, .woocommerce-order-received #instruction-container p:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2vh;
+}
+
+.woocommerce a.button.alt {
+	background-color: red;
+}
+
+.woocommerce a.button.alt:hover, .woocommerce a.button.alt:focus {
+	background-color: #890909;
+}	
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 29/03/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.woocommerce-checkout .wc_payment_method, .woocommerce-checkout .wc_payment_methods {
+		display: none;
+}
+
+body.woocommerce-checkout #payment #place_order {
+	background-color: red;
+	float: none;
+}
+
+body.woocommerce-checkout #payment #place_order:hover, body.woocommerce-checkout #payment #place_order:focus {
+	background-color: #890909;
+}
+
+.woocommerce-checkout .form-row .button {
+	background-color: red;
+	color: white;	
+	padding: 2vh 4vw;
+}
+
+.woocommerce-checkout .form-row .button:hover, .woocommerce-checkout .form-row .button:focus {
+	background-color: #890909;
+}
+
+.woocommerce-checkout #rememberme {
+	margin: auto 1vw auto 0;
+}
+
+
+@media screen and (min-device-width: 800px) and (max-device-width: 1024px) and (orientation: landscape) { /* Landscape tablet viewports */ /* CHANGED FROM 802px ON 05/04/17 */
+
+	.woocommece-checkout .form-row .button {
+		padding: 2vh 4vw;
+	}
+
+	.woocommerce-checkout .form-row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.woocommerce-checkout .login > .form-row label.inline:before {
+		content: "";
+		display: block;
+		height: 2vh;
+		flex-basis: 100%;
+	}
+
+	.woocommerce-checkout .login > .form-row label.inline {
+		display: flex;
+		flex-basis: 100%;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	
+	form.woocommerce-checkout {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	form.woocommerce-checkout #customer_details {
+		margin: auto;
+		width: 75%;
+	}
+	
+	.logged-in .woocommerce { /* ADDED 05/04/17 */
+		flex-basis: 100%;
+	}
+	
+	.logged-in .row {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}						/*~~~~~~~~~~~~~~~~~*/
+	
+	.woocommerce-account.logged-in .container:before {
+		content: "";
+		display: block;
+		height: 5vh;
+		width: 100%;
+	}
+	
+	.logged-in .woocommerce-MyAccount-content {
+		overflow-y: scroll;
+		height: 60vh;
+	}
+	
+	.logged-in .woocommerce {
+		height: 60vh;
+	}
+
+}
+
+.woocommerce-checkout .create-account {
+	display: flex;
+}
+
+.woocommerce-checkout #createaccount {
+	margin: auto 1vw auto 0;
+}
+
+.woocommerce-checkout .col-1, .woocommerce-checkout .col-2 {
+	float: none !important;
+	width: 100% !important;
+}
+
+.woocommerce-checkout div.create-account {
+	border-radius: 4px;
+	background-color: white;
+	padding: 2vh 2vw;
+	flex-direction: column;
+	border: 1px solid black;
+}
+
+.woocommece-checkout .create-account p {
+	margin: 0;
+}
+
+.woocommerce-checkout #woocommerce_eu_vat_number {
+	margin-top: 2vh;
+}
+
+body.logged-in .button {
+	background-color: red;
+	color: white;
+	border: red !important;
+}
+
+body.logged-in input.button:hover, body.logged-in input.button:focus {
+	background-color: #890909;
+	color: white;
+	border: #890909;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 03/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.woocommerce-account #accountContainer {
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Removed flex: 1; on 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	display: flex;
+	height: 100%; /* ~~~~~~~~~~~~~~~~ Added 10/04/17 for Chrome compatibility. ~~~~~~~~~~~~~~~~~~~ */
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+	margin: 0 !important;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 04/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.logged-in .woocommerce-MyAccount-content {
+	padding-top: 0;
+	padding-bottom: 0;
+	/*height: 100%; Removed 4:53PM */
+}
+
+.woocommerce-account.logged-in > .container {
+	padding: 10vh 0 2vh 0;
+}
+
+.woocommerce-account.logged-in .container .row {
+	padding: 5vh;
+}
+
+.logged-in .woocommerce-MyAccount-content form p:last-of-type {
+	width: 100%;
+	float: left;
+	margin-top: 3vh;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 05/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.logged-in mark {
+	padding: 0;
+}
+
+.logged-in .woocommerce-MyAccount-content {
+	padding-top: 5px;
+}
+
+/*@media screen and (max-width: 736px) and (orientation: landscape), screen and (max-width: 768px) and (orientation: portrait) { /* ALL Mobile Phone and Portrait Tablet viewports. */
+	/* .logged-in .woocommerce-MyAccount-content { */
+		/* padding-top: 5vh; */
+	/* } */
+/* } */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 06/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#billing-phone-field, #billing-email-field {
+	width: 100%;
+}
+
+#wp-submit {
+	padding: 2vh 4vw;
+	border-radius: 3px;
+	background-color: red;
+	color: white;
+	border-color: red;
+	font-weight: bold;
+	margin: auto;
+}
+
+#wp-submit:hover, #wp-submit:focus {
+	background-color: #890909;
+	border-color: #890909;
+}
+
+.page-id-468 .tml-submit-wrap {
+	margin: auto;
+}
+
+.page-id-468 .tml-rememberme-wrap {
+	flex-basis: 100%;
+	display: flex;
+}
+
+.page-id-468 .tml-rememberme-submit-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#theme-my-login {
+	width: 25%;
+	margin: auto;
+	border-radius: 3px;
+	border-color: grey;	
+}
+
+#theme-my-login:before, #theme-my-login:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 5vh;
+}
+
+.page-id-468 #loginform, .page-id-471 #lostpasswordform, .page-id-470 #registerform {
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 5%;
+	background-color: #eee;
+	margin: 0;
+}
+
+/*.page-id-468 .entry, .page-id-470 .entry, .page-id-471 .entry {
+	height: 100%;
+	display: flex;
+	align-content: center;
+}
+
+.page-id-468 .container, .page-id-468 .row, .page-id-468 .page, .page-id-468 .content, .page-id-468 .col-md-12, .page-id-470 .container, .page-id-470 .row, .page-id-470 .page, .page-id-470 .content, .page-id-470 .col-md-12, .page-id-471 .container, .page-id-471, .row, .page-id-471 .col-md-12, .page-id-471 .content, .page-id-471 .page {
+	height: 100%;
+}*/
+
+.page-id-468 .row, .page-id-468 .col-md-12, .page-id-470 .row, .page-id-470 .col-md-12, .page-id-471 .row, .page-id-471 .col-md-12 { /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	display: flex;																													 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}																																	 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+																																	
+.page-id-468 .col-md-12, .page-id-470 .col-md-12, .page-id-471 .col-md-12 {															 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	flex-direction: column;																											 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	justify-content: center;																										 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	flex-basis: 100%;																												 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}																																	 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.tml {
+	max-width: none;
+}
+
+.page-id-468 #user_login, .page-id-468 #user_pass {
+	border-radius: 2px;
+}
+
+.tml-rememberme-wrap #rememberme {
+	margin-left: auto;
+	margin-right: 1vw;
+}
+
+.tml-rememberme-wrap label {
+	margin-right: auto;
+}
+
+#theme-my-login ul.tml-action-links {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+div.tml .tml-action-links li {
+	flex: 1;
+	display: flex;
+	border-top: 1px solid;
+	border-right: 1px solid !important;
+	border-left: 1px solid;
+	border-bottom: 2px solid;
+	border-color: grey;
+	border-radius: 3px;
+	padding: 0;
+	margin: 0;
+}
+
+div.tml .tml-action-links li a {
+	background-color: #eee;
+	flex: 1;
+}
+
+div.tml .tml-action-links li a:hover, div.tml .tml-action-links li a:focus {
+	background-color: grey;
+}
+
+.tml-action-links li a {
+	padding: 4vh !important;
+	color: black;
+	font-size: 16px;
+}
+
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+	.page-id-468 #theme-my-login {
+		width: 75%;
+	}
+}
+
+.page-id-470 .message {
+	margin: 0;
+}
+
+.tml-submit-wrap {
+	display: flex;
+}
+
+.page-id-470 #theme-my-login {
+	width: 25%;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 07/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.page-id-470 .error, .page-id-468 .error, .page-id-471 .error {
+	margin: 0 !important;
+	border-radius: 3px;
+}
+
+.message {
+	border-radius: 3px;
+	margin: 0 !important;
+}
+
+#meta-container {
+	flex-direction: column;
+}
+
+#meta-container .myAccountItem, #meta-container .logOutItem {
+	width: 100%;
+	height: 33%;
+}
+
+#meta-container .myAccountItem a, #meta-container .logOutItem a {
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+	border-bottom: 1px solid grey !important;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+}
+
+#meta-container .myAccountItem a:hover, #meta-container .myAccountItem a:focus, #meta-container .logOutItem a:hover, #meta-container .logOutItem a:focus {
+	background-color: grey;
+}
+
+#cart-contents {
+	font-size: 12px;
+}
+
+#cart-icon {
+	font-size: 25px !important;
+}
+
+.tester {
+	background-color: #d2d2d2;
+	width: 100%;
+	height: 50%;
+}
+
+#login {
+	width: 100%;
+	height: 50%;
+}
+
+#login a {
+	background-color: #eee;
+}
+
+#login a:hover, #login a:focus {
+	background-color: grey;
+}
+
+#login p {
+	font-size: 16px !important; 
+	text-transform: none;
+}
+
+.tester p, #login p {
+	color: black;
+}
+
+#login a {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	text-decoration: none;
+}
+
+.tester p, .myAccountItem p, .logOutItem p {
+	margin: 0;
+}
+
+#userMenuCollapse {
+	flex-basis: 15%;
+	display: flex;
+}
+
+#userMenuCollapse .fa {
+	margin: auto;
+	text-decoration: none;
+}
+
+#userMenuCollapse .fa-chevron-up {
+	color: #e61717;
+}
+
+#meta-container .hiddenItem {
+	display: none !important;
+}
+
+#meta-container .tester, #meta-container .myAccountItem, #meta-container .logOutItem  {
+	display: flex;
+}
+
+#meta-container .myAccountItem a, #meta-container .logOutItem a {
+	display: flex;
+}
+
+#usernameContainer {
+	flex-basis: 85%;
+	display: flex;
+	text-align: center;
+}
+
+#usernameContainer p, .myAccountItem p, .logOutItem p, #login p {
+	margin: auto;
+}
+
+.fa-chevron-down, .fa-chevron-up {
+	font-size: 25px !important;
+	color: black;
+}
+
+.tester.collapsedLarge {
+	height: 33% !important;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 10/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.woocommerce-account .container, .woocommerce-account .entry {
+	height: 100%;
+}
+
+.woocommerce-MyAccount-content {
+	overflow: scroll;
+	height: 100%;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Added 12/04/17 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.woocommerce-MyAccount-content p {
+	margin-bottom: 5%;
+}
+
+#meta-subContainer {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	display: none;
+	width: 100%;
+}
+
+#meta-subContainer li {
+	flex: 1;
+	flex-direction: column;
+}
+
+#meta-subContainer li a {
+	margin: 0;
+	flex: 1;
+}
+
+#meta-subContainer.dropped {
+	display: flex !important;
+}
+
+.woocommerce-product-details__short-description ul {
+	border: 1px solid grey;
+	border-radius: 2px;
+	padding: 0;
+	text-align: center;
+	padding-top: 5vh;
+}
+
+.woocommerce-loop-product__title:hover {
+	color: #890909;
+}
+
+.woocommerce-loop-product__title:hover:after {
+	background: #890909;
+}
+
+.single-product .single_add_to_cart_button {
+	width: 100%;
+	padding: 5% 0 !important;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+

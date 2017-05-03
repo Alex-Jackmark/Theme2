@@ -1,0 +1,1651 @@
+/*
+
+CONTENTS 
+
+-- RESPONSIVE (MEDIA QUERIES) 
+		-- screen and (max-height: 320px) ##### [SMALLEST LANDSCAPE MOBILE PHONE VIEWPORTS]
+		-- screen and (max-height: 799px) ##### [ALL MOBILE PHONE + LANDSCAPE TABLET VIEWPORTS]
+		-- screen and (max-width: 414px) and (orientation: portrait) ##### [PORTRAIT MOBILE PHONE VIEWPORTS]
+		-- screen and (max-width: 580px) ##### [SMALLER PORTRAIT MOBILE + SMALLEST LANDSCAPE MOBILE VIEWPORTS]
+		-- screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 768px)  and (orientation: portrait) ##### [ALL MOBILE PHONE VIEWPORTS]
+		-- screen and (max-width: 801px) ##### [DEFAULT CSS FOR ALL VIEWPORTS UP TO PORTRAIT LARGE TABLETS]
+		-- screen and (min-width : 320px) and (max-width : 1023px) ##### [ALL MOBILE PHONE/TABLET VIEWPORTS]
+		-- screen and (min-width : 600px) and (max-width : 1023px) ##### [WIDER MOBILE PHONE/TABLET VIEWPORTS]
+		-- screen and (min-device-width: 800px) and (max-device-width: 1023px) and (orientation: landscape) ##### [LANDSCAPE TABLET VIEWPORTS]
+		-- screen and (max-width: 1023px) and (orientation: landscape), screen and (min-width: 600px) and (max-width: 1023px) and (orientation: portrait) ##### [LANDSCAPE MOBILE PHONE + ALL TABLET VIEWPORTS]
+		-- screen and (orientation: landscape) ##### [ALL LANDSCAPE VIEWPORTS]
+-- MAIN CSS
+		-- HEADER SECTION
+		-- BODY SECTION
+		-- FOOTER SECTION
+		-- INDEX
+		-- WOOCOMMERCE GENERAL
+		-- WOOCOMMERCE SHOP PAGE
+		-- WOOCOMMERCE SHOP ITEM PAGE
+		-- WOOCOMMERCE ACCOUNT PAGE
+		-- WOOCOMMERCE CART PAGE
+		-- WOOCOMMERCE CHECKOUT PAGE
+		-- WOOCOMMERCE ORDER RECEIVED PAGE
+		-- THEME-MY-LOGIN LOGIN PAGE
+		-- CONTACT PAGE
+		-- WORDPRESS GENERAL
+		-- RECAPTCHA
+
+/* ========== Media Queries ========== */
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 														Default CSS for all viewports up to portrait large tablets.														* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-width: 801px) { 
+	
+/* HEADER SECTION
+======================================================================================================================================================================== */
+	#navbar-ex-collapse-child { 
+		display: none;  
+		height: 100%;
+		z-index: 0; 
+		border-left: 0;
+		border-right: 0;
+	}
+	
+	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-menu-1 li, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, #navbar-toggle-container {
+		display: flex;
+	}
+	
+	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, #navbar-toggle-container {
+		flex: 1;
+	}
+	
+	#cart-container, #menu-menu-1, #navbar-ex-collapse-child #menu-menu-1 li a {
+		flex-direction: column;
+	}
+	
+	#navbar-ex-collapse-child, #menu-menu-1 li, #cart-container {
+		width: 100%;
+	}
+	
+	#menu-menu-1 li, #navbar-toggle-container .navbar-toggle {
+		margin: auto;
+	}
+	
+	#navbar-ex-collapse-child, #cart-container {
+		left: 0;
+		position: fixed;
+	}
+	
+	#navbar-ex-collapse-child.collapse-child.collapse.in { 
+		background-color: black;
+	}
+	
+	#cart-container, #menu-menu-1 { 
+		flex-wrap: wrap;
+	}
+
+	#menu-menu-1 li {
+		border-bottom: 1px solid #292929;	
+	}
+
+	#navbar-ex-collapse-child #menu-menu-1 li:last-of-type {
+		border-bottom: 0;
+	}
+	
+	#navbar-ex-collapse-child #menu-menu-1 li a {
+		justify-content: center;
+		
+	}
+	
+	#navbar-toggle-container { 
+		z-index: 1; 
+	}
+	
+	button.navbar-toggle.collapsedLarge { 
+		background-color: transparent !important;
+	}
+	
+	#cart-container { 
+		border: 1px solid black;
+		background-color: #c5c57c;
+	}
+	
+	#cart-container #cart-contents #subtotal {
+		margin: auto 5vw;
+	}
+	
+	#meta-subContainer { 			
+		height: 33vh; 					
+	} 									
+	
+	#meta-subContainer.dropped {	     
+		position: absolute;		   		  	 			    	
+	}							   		
+	
+/* WOOCOMMERCE SHOP PAGE
+========================================================================================== */
+	.products .product {            
+		width: 40% !important;	
+		margin: 5% auto !important;
+	} 
+	
+/* WOOCOMMERCE GENERAL
+========================================================================================== */
+	.woocommerce .login {
+		font-size: 12px;
+	}
+	
+/* WOOCOMMERCE ACCOUNT PAGE
+========================================================================================== */
+	.woocommerce-account .button {
+		padding: 2vh !important; 
+	}
+	
+	.woocommerce-LostPassword {
+		text-align: center;
+	}
+	
+/* WOOCOMMERCE CART PAGE
+========================================================================================== */
+	.woocommerce .product-remove a.remove {
+		border: 1px solid red;
+		padding: 2%;
+		height: auto;
+		width: auto;
+		border-radius: 4px;
+		background-color: red;
+		color: white !important;
+	}
+	
+/* CONTACT PAGE
+========================================================================================== */
+	#contact-main-content, #contact-main-content #contact-form2 {
+		flex-basis: 100% !important;
+	}
+	
+	#contact-side-content {
+		display: none;
+	}
+	
+/* WOOCOMMERCE CHECKOUT PAGE
+========================================================================================== */	
+	.woocommerce-checkout .lost_password {
+		display: flex;
+	}
+	
+	.woocommerce-checkout .lost_password a {
+		margin: auto;
+	}
+	
+	.woocommerce-checkout .login .form-row .button {
+		width: 100%;
+	}
+	
+	.woocommerce-checkout .form-row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 																	Portrait Mobile Phone Viewports.																	* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-width: 414px) and (orientation: portrait) { 
+
+/* HEADER SECTION
+========================================================================================== */	
+	nav.navbar-fixed-top #meta-container #login, nav.navbar-fixed-top #meta-container #login a {
+		margin: 0;
+	}
+	
+	nav.navbar-fixed-top .tester, nav.navbar-fixed-top #meta-container #login{
+		flex-direction: column;
+	}
+	
+	.tester #userMenuCollapse {
+		flex: 1;
+	}
+	
+	.tester #usernameContainer {
+		flex: 2;
+	}
+	
+	.tester #usernameContainer {
+		text-align: center;
+	}
+
+	
+/* WOOCOMMERCE SHOP PAGE
+========================================================================================== */
+	.products .product, .woocommerce-result-count, .woocommerce-ordering, .woocommerce-ordering .orderby {
+		width: 100% !important;	 
+	}        
+	
+	.woocommerce-result-count, .woocommerce-ordering, .woocommerce-ordering .orderby {
+		text-align: center;		
+	}																				   
+	
+/* WOOCOMMERCE ACCOUNT PAGE
+========================================================================================== */
+	.woocommerce-account #billing_phone_field, .woocommerce-account #billing_email_field {
+		width: 100%;
+	}
+	
+/* THEME-MY-LOGIN LOGIN PAGE
+========================================================================================== */
+	#theme-my-login { 
+		width: 100% !important;
+	}
+	
+	.page-id-470 #registerform { 
+		padding: 5% 0 !important;
+	}
+	
+	.page-id-470 #registerform p { 
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	
+	#theme-my-login .g-recaptcha > div { 
+		margin: auto;
+	}					
+
+	.page-id-470 .tml-action-links li, .page-id-470 #registerform { 
+		border-radius: 0 !important;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 																Landscape Mobile Phone + All Tablet Viewports.															* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-width: 1023px) and (orientation: landscape), screen and (min-width: 600px) and (max-width: 1023px) and (orientation: portrait) { /*    */
+/* THEME-MY-LOGIN LOGIN PAGE
+========================================================================================== */
+	body #theme-my-login {
+		width: 75% !important;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 															All Mobile Phone, Laptop + Landscape Tablet Viewports.																* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-height: 799px) {
+/* HEADER SECTION
+========================================================================================== */	
+	#cart-container { 
+		top: 14vh;
+	}
+	
+	nav.navbar { 
+		height: 14vh;
+	}
+
+/* ALL PAGES
+========================================================================================== */	
+	body > div.container {
+		padding-top: 14vh;
+	}
+	
+/* INDEX PAGE
+========================================================================================== */	
+	#welcome {
+	padding-top: 14vh;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 															 Smallest Landscape Mobile Phone Viewports.																	* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-height: 320px) { 
+
+/* ALL PAGES
+========================================================================================== */	
+	html body {
+		font-size: 12px;
+	}
+	
+/* INDEX PAGE
+========================================================================================== */		
+	.lead p, .btn-group-lg > a.btn, a.btn-lg {
+		font-size: 14px;
+	}
+}	
+
+ /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------	*
+ * 													Smaller Portrait Mobile + Smallest Landscape Mobile Viewports.														* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-width: 580px) {
+
+/* HEADER SECTION
+========================================================================================== */	
+	.site-title { 
+		flex: 3 !important;
+	}	
+
+/* WOOCOMMERCE GENERAL
+========================================================================================== */
+	.woocommerce .content {
+		padding: 2vh 0;
+	}	
+	
+/* WOOCOMMERCE CHECKOUT
+========================================================================================== */
+	.woocommerce-checkout .woocommerce .woocommerce-billing-fields #billing_email_field, .woocommerce-checkout .woocommerce .woocommerce-billing-fields #billing_phone_field, #createaccount { 
+		width: 100%; 
+	}	
+	
+	.woocommerce-checkout .woocommerce #customer_details {
+		padding: 0 5%; 
+	}
+	
+	#createaccount {
+		border: 0px; 
+		height: 2em; 
+	}
+	
+	#ship-to-different-address-checkbox {
+		width: 50%;
+		height: 1em;
+	}
+	
+/* WOOCOMMERCE SHOP PAGE
+========================================================================================== */	
+	.archive .woocommerce-message {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}	
+
+/* WOOCOMMERCE SHOP ITEM PAGE
+========================================================================================== */
+	.single-product .product:after, body.single-product .container:after { 
+		content: "";
+		display: block;
+		height: 5vh;
+		width: 100%;
+	}
+	
+	.single-product .content .product .entry-summary { 
+		margin-top: 2%;
+	}
+
+	.single-product .content .product { 
+		flex-direction: column;
+		flex-basis: 100%;
+	}
+
+	.single-product .content #shop-back .back_button { 
+		flex-basis: 75%;
+		text-align: center;
+	}
+
+	.single-product .col-md-8 { 
+		padding-left: 0;
+		padding-right: 0;
+	}
+}	
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 																	All Mobile Phone Viewports.																			* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 768px)  and (orientation: portrait){
+/* WOOCOMMERCE GENERAL
+========================================================================================== */
+	.logged-in div.woocommerce {
+		padding: 0 !important;
+	}
+
+	.logged-in .woocommerce:before {
+		height: 10vh;
+		order: 0;
+	}
+	
+	.logged-in .woocommerce:after {
+		height: 5vh;
+		order: 3;
+	}
+	
+	.logged-in .woocommerce {
+		flex-basis: 100%;
+	}
+	
+	
+/* WOOCOMMERCE ACCOUNT PAGE
+========================================================================================== */	
+	.woocommerce-account .woocommerce {
+		flex-wrap: nowrap;
+	}
+	
+	.woocommerce .woocommerce-MyAccount-navigation {
+		order: 2;
+		height: auto;
+	}
+	
+	.woocommerce .woocommerce-MyAccount-content {
+		order: 1;
+	}
+	
+	.logged-in .woocommerce-MyAccount-navigation ul {
+		padding-right: 0;
+	}
+	
+	.content .woocommerce-MyAccount-navigation li a {
+		padding: 3vh 0;
+	}
+	
+	.woocommerce-account.logged-in .container .row {
+		padding: 5vh 0 !important;
+	}
+	
+	.logged-in #accountContainer {
+		flex-direction: column;
+	}
+	
+	.woocommerce-MyAccount-content {
+		flex: 1;
+		min-height: 20vh;
+	}
+
+/* WOOCOMMERCE CART PAGE
+========================================================================================== */	
+	.woocommerce table.shop_table {
+		border-radius: 0;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 																	Wider Mobile Phone/Tablet Viewports.																* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (min-width : 600px) and (max-width : 1023px) { 
+/* WOOCOMMERCE SHOP ITEM PAGE
+========================================================================================== */
+	.single-product .content #shop-back a.back_button {
+		margin-left: 2%;
+	}
+
+	.single-product .product {
+		flex-basis: 100%;
+		border-radius: 0;
+	}
+
+	.single-product .content {
+		padding: 2vh 0;
+	}
+
+	.single-product .col-md-8 {
+		padding: 0;
+	}
+
+	.single-product .single_add_to_cart_button {
+		width: 100%;
+	}
+
+	body.single-product .container:after {
+		height: 20vh;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 																All Mobile Phone/Tablet Viewports.																		* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (min-width : 320px) and (max-width : 1023px) { 
+/* WOOCOMMERCE SHOP ITEM PAGE
+========================================================================================== */
+	.single-product .single_add_to_cart_button { 
+		padding: 7% !important;
+	}
+
+/* WOOCOMMERCE ACCOUNT PAGE
+========================================================================================== */	
+	.woocommerce-customer-details, .woocommerce-order-details, .addresses { 
+		padding: 0 !important;
+	}
+	
+/* THEME-MY-LOGIN LOGIN PAGE
+========================================================================================== */	
+	#wp-submit { 
+		padding: 3vh 12vw !important;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 															All Landscape Viewports up to laptops/desktops.																			* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (orientation: landscape) and (max-device-width: 1023px) { 
+/* THEME-MY-LOGIN LOGIN PAGE
+========================================================================================== */
+	.page-id-468 #theme-my-login {
+		width: 75%;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 																  Landscape Tablet Viewports.																			* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (min-device-width: 800px) and (max-device-width: 1023px) and (orientation: landscape) {
+/* WOOCOMMERCE GENERAL 
+========================================================================================== */	
+	.woocommerce-account.logged-in .container:before { 
+		content: "";
+		display: block;
+		height: 5vh;
+		width: 100%;
+	}
+	
+	.logged-in .woocommerce { 
+		height: 60vh;
+	}
+	
+/* WOOCOMMERCE CHECKOUT PAGE 
+========================================================================================== */	
+	.woocommerce-checkout .login > .form-row label.inline:before, .woocommerce-checkout .login > .form-row label.inline {
+		display: flex;
+		flex-basis: 100%;
+	}
+	
+	.woocommerce-checkout .login > .form-row label.inline:before {
+		content: "";
+		height: 2vh;
+	}
+
+	.woocommerce-checkout .login > .form-row label.inline { 
+		flex-wrap: wrap;
+	}
+
+	form.woocommerce-checkout #customer_details { 
+		margin: auto;
+		width: 75%;
+	}
+}
+
+/*
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NON-RESPONSIVE CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+ *
+*/
+/* HEADER SECTION	(MAIN)
+==================================================================================================================================================================================== */
+.navbar-header, #meta-container, #navbar-ex-collapse-child, .navbar-header .site-title, #menu-menu-1, #cart-container, #meta-container .tester, #cart-container #cart-contents, #login a, #userMenuCollapse,
+#meta-container .tester, #meta-container .myAccountItem, #meta-container .logOutItem, #meta-container .myAccountItem a, #meta-container .logOutItem a, #usernameContainer, .navbar .container-header  {
+	display: flex;
+}
+
+#meta-subContainer.dropped {
+	display: flex !important;
+}
+
+.navbar-header, #menu-menu-1 .menu-item, #cart-container, #meta-container .tester, #login a, #meta-subContainer, #meta-subContainer li, #meta-subContainer li a {
+	flex: 1;
+}
+
+.navbar-header, #meta-container, .navbar-header .site-title, #menu-menu-1 {
+	flex: 2;
+}
+
+#menu-menu-1 .menu-item, #usernameContainer {
+	text-align: center;
+}
+
+#cart-container #cart-contents, #meta-container .myAccountItem a, #meta-container .logOutItem a, #login a, #userMenuCollapse .fa {
+	text-decoration: none;
+}
+
+#meta-container, #meta-subContainer, #meta-subContainer li {
+	flex-direction: column;
+}
+
+#menu-item-231, #meta-subContainer { /* menu-item-231 - "Check Basket" Menu Item. */
+	display: none;
+}
+
+#meta-container .myAccountItem, #meta-container .logOutItem, #login {
+	width: 100%;
+}
+
+.container-fluid, .navbar .container-fluid {
+	padding: 0;
+}
+
+#meta-container .myAccountItem a, #meta-container .logOutItem a, #login a{
+	background-color: #eee;
+}
+
+.navbar-header, #meta-container, #login a {
+	height: 100%;
+}
+
+#cart-container #cart-contents, #cart-container #cart-contents span, #usernameContainer p, .myAccountItem p, .logOutItem p, #login p, #userMenuCollapse .fa {
+	margin: auto;
+}
+
+#meta-container .myAccountItem a:hover, #meta-container .myAccountItem a:focus, #meta-container .logOutItem a:hover, #meta-container .logOutItem a:focus, #login a:hover, #login a:focus {
+	background-color: grey;
+}
+
+#meta-container .myAccountItem a, #meta-container .logOutItem a, .tester p, #login p, #userMenuCollapse .fa {
+	color: black;
+}
+
+#cart-container #cart-contents, #navbar-ex-collapse-child .menu-item a, #meta-container .fa-chevron-down {
+	color: white;
+}
+
+.navbar-header, #meta-container { 
+	order: 3;
+}
+
+#navbar-ex-collapse-child {
+	flex: 11;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	order: 2;
+}
+	
+.navbar-header .site-title {
+	order: 1;
+}
+	
+#navbar-toggle-container { 
+	display: none !important;
+}
+
+#menu-menu-1 .menu-item {
+	margin: auto 0;
+}
+
+#meta-container .tester { 
+	background-color: #d2d2d2;
+}
+
+#meta-container li a {
+	border: 0 !important;
+}
+
+#cart-container #cart-contents {
+	flex-basis: 80%;
+}
+
+#cart-container #cart-contents:hover, #cart-container #cart-contents #cart-icon {
+	color: red;
+}
+
+#cart-container #cart-contents #cart-icon {
+	font-size: 30px !important;
+}
+
+#navbar-ex-collapse-child #menu-menu-1 .menu-item > a:focus, #navbar-ex-collapse-child #menu-menu-1 .menu-item > a:hover {
+	background-color: rgba(238,238,238,0.25);
+}
+
+#meta-container .myAccountItem a, #meta-container .logOutItem a {
+	border-bottom: 1px solid grey !important;
+}
+
+#cart-contents {
+	font-size: 12px;
+}
+
+#login {
+	height: 50%;
+	list-style: none;
+}
+
+#login p {
+	font-size: 16px !important; 
+	text-transform: none;
+}
+
+#userMenuCollapse .fa {
+	font-size: 25px !important;
+}
+
+#userMenuCollapse .fa-chevron-up {
+	color: #e61717;
+}
+
+#usernameContainer {
+	flex-basis: 85%;
+}
+
+#userMenuCollapse {
+	flex-basis: 15%;
+}
+
+#meta-container .hiddenItem {
+	display: none !important;
+}
+
+.navbar {
+	background-color: black !important;
+	height: 10vh; /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Amended to flex-friendly vh units on 07/03/17 AM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+
+.navbar-brand { 
+	margin: auto !important;
+	padding: 0 !important;
+}
+
+#menu-menu-1 .menu-item > a:focus, #menu-menu-1 .menu-item > a:hover {
+	background-color: transparent;
+	border-color: red !important;
+}
+
+#menu-menu-1 .menu-item.active a { 
+	border-bottom: 2px solid #0080ff !important;
+}
+
+
+
+/* BODY SECTION (MAIN)
+==================================================================================================================================================================================== */	
+html, body, body .navbar .container-fluid, body .navbar .container-fluid .container-header {
+	height: 100%;
+}
+
+html body { 
+    font-family: 'Alef';font-size: 14px;	
+}
+
+body > .container {  
+	min-height: 90%;
+	padding: 10vh 0 0 0; 
+}
+
+body .container .row { 
+	margin: 0;
+}
+
+.entry {
+	display: flex;
+}
+
+.container {
+	width: 100% !important;
+}
+
+.content {
+	padding: 0;
+}
+
+.col-md-12 {
+	padding: 0 !important;
+}
+
+.container { 
+	background-color: rgba(0,0,0,0.3);
+}
+
+/* FOOTER SECTION (MAIN)
+==================================================================================================================================================================================== */	
+.copyright {
+	height: 10%;
+	padding: 1% 0;
+	width: 100%;
+}
+
+.container-footer .row {
+	margin: auto;
+}
+
+.copyright .container-footer {
+	display: flex;
+	padding-right: 0;
+}
+
+/* INDEX (MAIN)
+==================================================================================================================================================================================== */	
+.home .row .col-md-12 {
+	margin: auto !important;
+}
+
+.home .row .col-md-12 h1, .home .row .col-md-12 h2 {
+	margin: 0;
+}
+
+.home .row {
+	display: flex;
+}
+
+#welcome {
+	height: 90%;
+	padding: 10vh 0 0 0;
+}
+
+.lead { 
+	padding: 0 12%;
+	margin-bottom: 1vh !important;
+} 
+
+.btn-primary {
+	background-color: red !important;
+	border-color: red !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+	background-color: #890909 !important;
+	border-color: #890909 !important;
+}
+
+.home .container {
+    height: 100%;
+    display: flex;
+}
+
+/* WOOCOMMERCE GENERAL (MAIN)
+==================================================================================================================================================================================== */	
+.woocommerce-message, #billing_phone_field, #billing_email_field {
+	width: 100%;
+}
+
+.woocommerce-page .woocommerce {  
+	flex-basis: 75%;
+	margin: auto;
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+	font-size: 14px;
+}
+
+.entry > .woocommerce-message { 
+	margin-bottom: 30% !important;
+}
+
+.woocommerce-page input.qty {
+	width: 100% !important;
+	height: 10% !important;
+	font-size: 20px !important; 
+}
+
+.woocommerce a.button.alt {
+	background-color: red;
+}
+
+.woocommerce a.button.alt:hover, .woocommerce a.button.alt:focus {
+	background-color: #890909;
+}
+
+/* WOOCOMMERCE SHOP PAGE (MAIN)
+==================================================================================================================================================================================== */	
+.woocommerce ul.products li.product .button, .archive .col-md-8 {
+	width: 100%;
+}
+
+.products .product {            
+	width: 20% !important;	   
+	margin: 2% !important; 
+	padding-bottom: 2vh !important; 
+}   
+
+.woocommerce.archive .col-md-8 span {
+	color: white;
+	background-color: grey;
+}
+
+.product a:hover .woocommerce-price-amount { 
+	background-color: #eee !important;
+	color: black !important;
+}
+
+.woocommerce ul.products li.product .price { 
+	text-align: center;
+}
+
+.woocommerce ul.products li.product .button { 
+	padding: 5%;
+	font-size: 20px;
+	background-color: red;
+	border-color: red;
+}
+
+.woocommerce ul.products li.product .button:hover { 
+	background-color: #890909 !important;
+	border-color: #890909 !important;
+}
+
+.product a:hover .woocommerce-loop-product__title {
+	color: #890909;
+}
+
+.product a:hover .woocommerce-loop-product__title:after {
+	background: #890909;
+}
+
+.archive .content {
+	padding: 6vh 5%; 
+}
+
+.archive .col-md-8 span, .archive .col-md-8 a {
+	font-size: 18px !important;
+}
+
+.archive .col-md-8 span { 
+	color: black;
+	font-weight: bold;
+}	
+
+/* WOOCOMMERCE SHOP ITEM PAGE (MAIN)
+==================================================================================================================================================================================== */	
+.single-product .row, .single-product .content, .single-product .product, #shop-back {
+	display: flex;
+}
+
+#shop-back .back_button, .single-product .content .entry-summary .single_add_to_cart_button {
+	background-color: red;
+}
+
+.single-product .container:after, .single-product .single_add_to_cart_button, .single-product .col-md-8, .single-product .quantity {
+	width: 100%;
+}
+
+.single-product .product, .single-product .product .summary, #shop-back .back_button {
+	border-radius: 4px;
+}
+
+.single-product .container { 
+	flex-direction: column;
+}
+
+.single-product .container:after {
+	content: "";
+	display: block;
+	height: 10vh;
+}
+
+.single-product .content {
+	flex-wrap: wrap;
+	padding: 6vh 5%; 
+}
+
+.single-product .product {
+	flex-basis: 70%;
+	justify-content: space-between; 
+	margin: 10px auto;
+	padding: 2%;
+	background-color: grey;
+}
+
+.single-product .content .product .images {
+	flex-basis: 50%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.single-product .product .summary { 
+	flex-basis: 45%; 
+	height: 100%;
+	background-color: white;
+	padding: 5%;
+}
+
+#shop-back {
+	flex-basis: 100%;
+	margin-bottom: 2%;	
+}
+
+#shop-back .back_button {
+	border: 1px solid red;
+	padding: 2vh 2vw; /* Changed from % units for Chrome compatibility. */
+	color: white;
+	text-decoration: none;
+	margin-left: 15%;
+}
+
+#shop-back .back_button:hover, .single-product .content .single_add_to_cart_button:hover { 
+	background-color: #890909 !important;
+	border-color: #890909 !important;
+}
+
+.woocommerce.single-product .entry-summary .cart div.quantity {
+	margin-bottom: 5%;
+}
+
+.woocommerce-product-details__short-description ul {
+	border: 1px solid grey;
+	border-radius: 2px;
+	padding: 5vh 0 0 0;
+	text-align: center;
+}
+
+.single-product .single_add_to_cart_button {
+	padding: 5% 0 !important;
+}
+
+
+.single-product .col-md-8 h3, .single-product .col-md-8 span, .single-product .col-md-8 a {
+	font-size: 18px !important;
+}
+
+.single-product .col-md-8 h3 {
+	text-decoration: underline;
+	color: white;
+	background-color: grey;
+}
+
+.single-product .col-md-8 span { 
+	color: black;
+	font-weight: bold;
+}	
+
+.content ul, .content li, .content blockquote {
+	margin-bottom: 5vh;
+	list-style: none;
+	font-weight: 700;
+}
+
+/* WOOCOMMERCE ACCOUNT PAGE (MAIN)
+==================================================================================================================================================================================== */	
+.woocommerce-account .container .row, .woocommerce-account .container .col-md-12, .woocommerce-account .container .content, .woocommerce-account .container .page, .woocommerce-account .woocommerce,
+.woocommerce-MyAccount-navigation, .woocommerce-account #accountContainer, .woocommerce-account .container, .woocommerce-account .entry, .woocommerce-MyAccount-content {
+	height: 100%;
+}
+
+.woocommerce-account .woocommerce, .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a, .woocommerce-MyAccount-navigation, .woocommerce-MyAccount-navigation-link, .woocommerce-account #accountContainer,
+.woocommerce-MyAccount-navigation ul {
+	display: flex;
+}
+
+.woocommerce .woocommerce-MyAccount-content, .woocommerce-MyAccount-content .button, .woocommerce-MyAccount-navigation-link {
+	border: 1px solid black;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a, .woocommerce-MyAccount-navigation ul, .woocommerce-MyAccount-navigation-link {
+	flex: 1;
+}
+
+.woocommerce-account .woocommerce, .woocommerce-cart .woocommerce, .woocommerce-MyAccount-content table {
+	background-color: white;
+}
+
+.woocommerce-account.logged-in .button, .woocommerce-account.logged-in .button:hover, .woocommerce-account.logged-in .button:focus {
+	color: white;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a, .logged-in .woocommerce-MyAccount-content form p:last-of-type {
+	width: 100%;
+}
+
+.woocommerce-account .woocommerce, .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a {
+	justify-content: center;
+}
+
+.woocommerce-account .woocommerce, .woocommerce-cart .woocommerce { 
+	padding: 0 2% !important; 
+	border-radius: 4px;
+}
+	
+.woocommerce-account .woocommerce {															   
+	flex-direction: column;																	   																   
+}																							   
+	
+.woocommerce-account.logged-in .woocommerce {												   
+	background-color: rgba(0,0,0,0);														   
+}																							   
+	
+.woocommerce .woocommerce-MyAccount-content, .woocommerce .woocommerce-MyAccount-navigation {  
+	margin: auto;																			   
+}																							   
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a {
+	align-items: center;
+	color: black;
+}
+
+.content .woocommerce-MyAccount-navigation li {
+	background-color: #eee;
+	font-size: 16px; 
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a:hover {
+	background-color: #333333;
+	color: white;
+	text-decoration: none;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link.is-active a {
+	background-color: rgba(255,0,0, 0.7); 
+	color: #eeeeee;
+	text-shadow: -1px 0 #333333,0 1px #333333,1px 0 #333333,0 -1px #333333;
+}
+
+.woocommerce-MyAccount-content {
+	background-color: rgba(255,255,254,1);
+	padding: 2%;
+	border-radius: 2px;
+}
+
+.woocommerce-MyAccount-content a {
+	color: #0080ff;
+}
+
+.woocommerce-MyAccount-navigation ul {
+	flex-direction: column;
+	padding-left: 0;
+	padding-right: 20%;
+}
+
+.woocommerce-MyAccount-navigation-link {
+	margin: 0 !important; /* Conflicts with line 650 on original stylesheet. */
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+	margin: 0 !important;
+}
+
+woocommerce-account.logged-in > .container {
+	padding: 10vh 0 2vh 0;
+}
+
+.woocommerce-account .container .content {
+	padding: 6vh 5%;
+}
+
+.logged-in .woocommerce-MyAccount-content form p:last-of-type {
+	float: left;
+	margin-top: 3vh;
+}
+
+.woocommerce-MyAccount-content {
+	overflow: scroll;
+}
+
+.woocommerce-account.logged-in .button {
+	background-color: red;
+	border: red !important;
+}
+
+.woocommerce-account.logged-in input.button:hover, .woocommerce-account.logged-in input.button:focus {
+	background-color: #890909;
+	border: #890909;
+}
+
+/* WOOCOMMERCE CART PAGE (MAIN)
+==================================================================================================================================================================================== */	
+.return-to-shop, .cart_item .product-thumbnail {
+	display: flex;
+}
+
+.woocommerce-cart .container .col-md-12, .woocommerce-cart .container .content, .woocommerce-cart .container .page, .woocommerce-cart .woocommerce:before {
+	width: 100%;
+}
+
+.woocommerce .return-to-shop a.button, .cart_item .product-thumbnail a {
+	margin: auto;
+}
+
+.woocommerce-cart .woocommerce {
+	flex-basis: 100%;
+}
+
+.cart-empty {
+	margin-top: 5vh;
+}                                         
+   
+.cart-empty {                              
+	text-align: center;                    
+}        
+
+.woocommerce-cart .woocommerce .woocommerce-cart-form input[name=update_cart], .woocommerce-cart .woocommerce .woocommerce-cart-form input[name=update_cart]:hover, .woocommerce-cart .woocommerce .woocommerce-cart-form input[name=update_cart]:focus {
+	color: white;
+}
+
+.woocommerce-cart .woocommerce-message {
+	margin-top: 2vh !important;
+	margin-bottom: 0 !important;
+}
+
+.woocommerce-cart .woocommerce > .woocommerce-message {
+	margin-top: 1vh !important;
+	margin-bottom: 3vh !important;
+	border-left: 1px solid grey;
+	border-bottom: 1px solid grey;
+	border-right: 1px solid grey;
+}
+
+.woocommerce-cart .woocommerce {
+	margin-top: 4vh !important;
+	margin-bottom: 4vh !important; 
+}
+	
+.cart_item .product-thumbnail a {
+	flex-basis: 75%;
+}
+
+.cart_item .product-thumbnail a img {
+	width: 20vw; 
+}
+
+.woocommerce-cart .woocommerce:before {
+	content: "";
+	display: block;
+	height: 2vh;
+}
+
+.wc-forward {
+	margin: 0 !important;
+}
+
+.woocommerce-cart .entry {
+	flex-wrap: wrap;
+}
+
+.woocommerce-cart input[name=update_cart] {
+	background-color: red;
+}
+
+.woocommerce-cart input[name=update_cart]:hover, .woocommerce-cart input[name=update_cart]:focus {
+	background-color: #890909;
+}
+
+/* WOOCOMMERCE CHECKOUT PAGE (MAIN)
+==================================================================================================================================================================================== */	
+.woocommerce-checkout #rememberme, .woocommerce-checkout #createaccount {
+	margin: auto 1vw auto 0;
+}
+
+.woocommece-checkout .blockUI {
+	width: 100vw !important;
+	height: 100vh !important;
+}
+
+.woocommerce-checkout .wc_payment_method, .woocommerce-checkout .wc_payment_methods {
+	display: none;
+}
+
+.woocommerce-checkout .form-row .button, body.woocommerce-checkout #payment #place_order, .woocommerce-checkout .form-row .button:hover, .woocommerce-checkout .form-row .button:focus,
+body.woocommerce-checkout #payment #place_order:hover, body.woocommerce-checkout #payment #place_order:focus {
+	color: white;
+}
+
+.woocommerce-checkout .form-row .button, body.woocommerce-checkout #payment #place_order {
+	background-color: red;
+	float: none;
+	padding: 2vh 4vw;
+}
+
+.woocommerce-checkout .form-row .button:hover, .woocommerce-checkout .form-row .button:focus, body.woocommerce-checkout #payment #place_order:hover, body.woocommerce-checkout #payment #place_order:focus {
+	background-color: #890909;
+}
+
+.woocommerce-checkout .create-account, .woocommerce-checkout .woocommerce-account-fields .create-account .checkbox {
+	display: flex;
+}
+
+.woocommerce-checkout .col-1, .woocommerce-checkout .col-2 {
+	width: 100% !important;
+}
+
+.woocommerce-checkout div.create-account {
+	border-radius: 4px;
+	background-color: white;
+	padding: 2vh 2vw;
+	flex-direction: column;
+	border: 1px solid black;
+}
+
+.woocommerce-checkout #woocommerce_eu_vat_number {
+	margin-top: 2vh;
+}
+
+.woocommerce-billing-fields p {
+	font-size: 12px !important;
+}
+
+.form-row.place-order {
+	margin-bottom: 5vh !important;
+}
+
+.logged-in mark {
+	padding: 0;
+}
+
+.woocommerce-checkout .woocommerce { 
+	padding-top: 2% !important;
+}
+
+.woocommerce-checkout .form-row input[type=submit] {
+	margin-right: 3%;
+}
+
+.woocommerce-checkout .checkbox input[type=checkbox] {
+	position: static;
+}
+
+/* WOOCOMMERCE ORDER RECEIVED PAGE (MAIN)
+==================================================================================================================================================================================== */	
+.woocommerce-order-received .entry:before, .woocommerce-order-received .entry:after, .woocommerce-order-received .woocommerce:before, .woocommerce-order-received .woocommerce:after,
+.woocommerce-order-received #instruction-container:after, .woocommerce-order-received #instruction-container:after  {
+	content: "";
+	display: block;
+	width: 100%;
+}
+
+.woocommerce-order-received .woocommerce .woocommerce-thankyou-order-received, .woocommerce-order-received .woocommerce ul, .woocommerce-order-received #instruction-container {
+	text-align: center;
+}
+
+.woocommerce-order-received .woocommerce:before, .woocommerce-order-received .woocommerce:after, .woocommerce-order-received #instruction-container p:before, .woocommerce-order-received #instruction-container p:after { 
+	height: 2vh;
+}
+
+.woocommerce-order-received .woocommerce:before, .woocommerce-order-received .woocommerce-thankyou-order-received {
+	background-color: red;
+}
+
+.woocommerce-order-received #instruction-container p, .woocommerce-order-received .woocommerce-thankyou-order-received {
+	color: white;
+}
+
+.woocommerce-order-received .woocommerce ul, .woocommerce-order-received #instruction-container {
+	display: flex;
+}
+
+.woocommerce-order-received .woocommerce .order_details li, .woocommerce-order-received #instruction-container p {
+	margin: auto;
+}
+
+.woocommerce-order-received .order_details, .woocommerce-order-received #instruction-container p {
+	border: 1px solid black;
+}
+
+.woocommerce-order-received .woocommerce:before, .woocommerce-order-received .woocommerce-thankyou-order-received {
+	border-left: 2px solid black;
+}
+
+.woocommerce-order-received .woocommerce:before, .woocommerce-order-received .woocommerce-thankyou-order-received {
+	border-right: 2px solid black;
+}
+
+body.woocommerce-order-recieved .content {
+	padding: 4% 0;
+}
+
+.woocommerce-order-received .entry:before, .woocommerce-order-received .entry:after {
+	height: 5vh;
+}
+
+.woocommerce-order-received .woocommerce {
+	background-color: white;
+	padding: 5%;
+	padding-top: 2% !important;
+}
+
+.woocommerce-order-received .woocommerce .woocommerce-thankyou-order-received {
+	padding-top: 4%;
+	font-weight: bold;
+	text-decoration: underline;
+	border-bottom: 2px solid black;
+	font-size: 25px !important;
+	text-shadow: 2px 2px black;	
+}
+
+.woocommerce-order-received .woocommerce address {
+	padding-bottom: 4%;
+}
+
+.woocommerce-order-received .woocommerce ul {
+	padding: 0;
+}
+
+.woocommerce-order-received .woocommerce .order_details li {
+	flex: 1; 
+}
+
+.woocommerce-order-received .order_details {
+	min-height: 5vh;
+}
+
+.woocommerce-order-received #instruction-container {
+	margin-top: 4vh;
+	flex-direction: column;
+}
+
+.woocommerce-order-received #instruction-container p {
+	background-color: black;
+	font-size: 18px;
+	font-weight: normal !important;
+	width: 85%;
+	border-radius: 2px;
+	padding: 0 2vw;
+}
+
+.woocommerce-order-received #instruction-container:after {
+	height: 4vh;
+}
+
+.woocommerce-order-received .entry {
+	flex-wrap: wrap;
+}
+
+.woocommerce-order-received .woocommerce {
+	padding-bottom: 0;
+}
+
+
+/* THEME-MY-LOGIN LOGIN PAGE (MAIN)
+==================================================================================================================================================================================== */	
+.page-id-468 .container, .page-id-468 .row, .page-id-468 .col-md-12, .page-id-470 .container, .page-id-470 .row, .page-id-470 .col-md-12, .page-id-471, .container, .page-id-471 .row, .page-id-471 .col-md-12,
+.page-id-468 .tml-rememberme-wrap, .page-id-468 .tml-rememberme-submit-wrap, #theme-my-login ul.tml-action-links, div.tml .tml-action-links li, div.tml .tml-action-links li, .tml-submit-wrap { 
+	display: flex;																													 
+}	
+
+div.tml .tml-action-links li, div.tml .tml-action-links li a {
+	flex: 1;
+}
+
+.page-id-468 .tml-submit-wrap, .tml, .tml-submit-wrap input[type=submit] {
+	margin: auto;
+}
+
+.page-id-468 #loginform, .page-id-471 #lostpasswordform, .page-id-470 #registerform, div.tml .tml-action-links li, #wp-submit, .tml .error, .message {
+	border-radius: 3px;
+}
+
+#theme-my-login ul.tml-action-links, div.tml .tml-action-links li {
+	margin: 0;
+}
+
+.page-id-468 #loginform, .page-id-471 #lostpasswordform, .page-id-470 #registerform, div.tml .tml-action-links li a {
+	background-color: #eee;
+}
+
+.page-id-468 .tml-rememberme-wrap, .page-id-468 .col-md-12, .page-id-470 .col-md-12, .page-id-471 .col-md-12 {
+	flex-basis: 100%;
+}
+
+.page-id-468 .tml-rememberme-submit-wrap, .page-id-471 {
+	flex-wrap: wrap;
+}
+
+.page-id-468 #loginform, .page-id-471 #lostpasswordform, .page-id-470 #registerform {
+	border: 1px solid black;
+	padding: 5%;
+}
+
+.page-id-468 .col-md-12, .page-id-470 .col-md-12, .page-id-471 .col-md-12 {															 
+	flex-direction: column;																											 
+	justify-content: center;																										 
+}																															 
+
+.tml {
+	max-width: none;
+	width: 25%;
+}
+
+.page-id-468 #user_login, .page-id-468 #user_pass {
+	border-radius: 2px;
+}
+
+.tml-rememberme-wrap #rememberme {
+	margin-left: auto;
+	margin-right: 1vw;
+}
+
+.tml-rememberme-wrap label {
+	margin-right: auto;
+}
+
+div.tml .tml-action-links li {
+	border-top: 1px solid;
+	border-right: 1px solid !important;
+	border-left: 1px solid;
+	border-bottom: 2px solid;
+	border-color: grey;
+	padding: 0;
+}
+
+div.tml .tml-action-links li a {
+	padding: 4vh !important;
+	color: black;
+	font-size: 16px;
+}
+
+div.tml .tml-action-links li a:hover, div.tml .tml-action-links li a:focus {
+	background-color: grey;
+}
+
+.message {
+	margin: 0 !important;
+}
+
+.tml .error {
+	margin: 0 !important;
+}
+
+#wp-submit {
+	padding: 2vh 4vw;
+	background-color: red;
+	color: white;
+	border-color: red;
+	font-weight: bold;
+}
+
+#wp-submit:hover, #wp-submit:focus {
+	background-color: #890909;
+	border-color: #890909;
+}
+
+#theme-my-login:before, #theme-my-login:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 5vh;
+}
+
+/* CONTACT PAGE (MAIN)
+========================================================================================== */
+#contact-main-content:before, #contact-main-content:after {
+	content: "";
+	display: block;
+	height: 6vh;
+	width: 100%;
+}
+
+#contact-main-content #gmaps2, #contact-main-content #contact-form2, #contact-side-content #gmaps-info2, #contact-side-content #open-hours {
+	border: 1px solid black;
+}
+
+#contact-main-content, #contact-main-content #contact-form2 {
+	display: flex;
+}
+
+#open-hours p, #gmaps-info2 p {
+	margin-bottom: 1vh;
+}
+
+#contact-main-content #contact-form2, #contact-side-content #gmaps-info2, #contact-side-content #open-hours {
+	text-align: center;
+}
+
+#contact-main-content, #contact-main-content #gmaps2 {
+	margin: auto auto;
+}
+
+#contact-main-content {
+	flex-basis: 75%;
+	flex-wrap: wrap;
+	border-right: 1px solid #000000;
+	background-color: rgba(119,119,119,0.3);
+	order: 1;
+	overflow: scroll;
+}
+
+#contact-main-content #gmaps2 {
+	flex-basis: 90%;
+}
+
+#contact-main-content #contact-form2 {
+	flex-basis: 65%;
+	margin: 20px auto 0 auto; 
+	border-radius: 4px;
+	background-color: white;
+	padding: 5% 1%;	
+	color: black !important;
+	flex-direction: column;
+}
+
+#contact-main-content #contact-form2 h4 {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.page-id-38 .container .row, .page-id-38 .col-md-12, .page-id-38 .content, .page-id-38 .page, .page-id-38 .entry, .page-id-38 #contact-main-content, .page-id-38 #contact-side-content {
+	height: 100%;
+}
+
+#contact-side-content {
+	background-color: #eee !important;
+	flex-basis: 25%;
+	padding-top: 5vh; 
+	font-size: 1vmin !important;
+	order: 2;
+}
+
+#contact-side-content #gmaps-info2, #contact-side-content #open-hours {
+	margin: 0 3% 2.5% 3%;
+	padding: 0.5%;
+	width: 20%;
+	border-radius: 2px;
+	background-color: white;
+	position: absolute; 
+}
+
+#contact-side-content #open-hours {
+	top: 70%;
+}
+
+.page-id-38 .container {
+	height: 90%; 
+}
+
+#gmaps-info2 p {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+.cscfForm > p, .cscfForm .control-group {
+	padding: 0 7%;
+}
+
+.cscfForm .control-group:last-of-type {
+	padding: 0;
+}
+
+#cscf_message {
+	resize: none;
+}
+
+/* WORDPRESS GENERAL (MAIN)
+==================================================================================================================================================================================== */
+.spacer {
+	display: none;
+}
+
+.row {
+	flex-basis: 100%;
+}
+
+body section {
+	padding: 0;
+}
+
+/* RECAPTCHA (MAIN)
+==================================================================================================================================================================================== */
+.g-recaptcha > div {
+	margin: 0 auto;
+}
