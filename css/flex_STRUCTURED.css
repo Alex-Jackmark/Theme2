@@ -1030,7 +1030,7 @@ body .container .row {
 /* WOOCOMMERCE ACCOUNT PAGE (MAIN)
 ==================================================================================================================================================================================== */	
 .woocommerce-account .container .row, .woocommerce-account .container .col-md-12, .woocommerce-account .container .content, .woocommerce-account .container .page, .woocommerce-account .woocommerce,
-.woocommerce-MyAccount-navigation, .woocommerce-account #accountContainer, .woocommerce-account .container, .woocommerce-account .entry, .woocommerce-MyAccount-content {
+.woocommerce-MyAccount-navigation, .woocommerce-account .container, .woocommerce-account .entry, .woocommerce-MyAccount-content {
 	height: 100%;
 }
 
@@ -1131,7 +1131,7 @@ woocommerce-account.logged-in > .container {
 }
 
 .woocommerce-account .container .content {
-	padding: 6vh 5%;
+	padding: 0 5%;
 }
 
 .logged-in .woocommerce-MyAccount-content form p:last-of-type {
@@ -1151,6 +1151,14 @@ woocommerce-account.logged-in > .container {
 .woocommerce-account.logged-in input.button:hover, .woocommerce-account.logged-in input.button:focus {
 	background-color: #890909;
 	border: #890909;
+}
+
+.woocommerce-orders-table .woocommerce-orders-table__row {
+	height: 6vh;
+}
+
+.woocommerce-account #accountContainer {
+	height: 65%;
 }
 
 /* WOOCOMMERCE CART PAGE (MAIN)
