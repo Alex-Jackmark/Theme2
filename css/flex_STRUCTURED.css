@@ -2,17 +2,20 @@
 CONTENTS 
 
 -- RESPONSIVE (MEDIA QUERIES) 
-		-- screen and (max-height: 320px) ##### [SMALLEST LANDSCAPE MOBILE PHONE VIEWPORTS]
-		-- screen and (max-height: 799px) ##### [ALL MOBILE PHONE + LANDSCAPE TABLET VIEWPORTS]
-		-- screen and (max-width: 414px) and (orientation: portrait) ##### [PORTRAIT MOBILE PHONE VIEWPORTS]
-		-- screen and (max-width: 580px) ##### [SMALLER PORTRAIT MOBILE + SMALLEST LANDSCAPE MOBILE VIEWPORTS]
-		-- screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 768px)  and (orientation: portrait) ##### [ALL MOBILE PHONE VIEWPORTS]
 		-- screen and (max-width: 801px) ##### [DEFAULT CSS FOR ALL VIEWPORTS UP TO PORTRAIT LARGE TABLETS]
-		-- screen and (min-width : 320px) and (max-width : 1023px) ##### [ALL MOBILE PHONE/TABLET VIEWPORTS]
+		-- screen and (max-width: 414px) and (orientation: portrait) ##### [PORTRAIT MOBILE PHONE VIEWPORTS]
+		-- screen and (max-width: 1023px) and (orientation: landscape), screen and (min-width: 600px) and (max-width: 1023px) and (orientation: portrait) ##### [LANDSCAPE MOBILE PHONE + ALL TABLET VIEWPORTS]		
+		-- screen and (max-height: 799px) ##### [ALL MOBILE PHONE, LAPTOP + LANDSCAPE TABLET VIEWPORTS]
+		-- screen and (max-device-height: 799px) and (max-device-width: 801px) ##### [ALL MOBILE PHONE, LAPTOP + LANDSCAPE TABLET VIEWPORTS WITH A CART CONTAINER BANNER.]
+		-- screen and (min-device-height: 799px) and (max-device-width: 801px) ##### [PORTRAIT TABLET VIEWPORTS WITH A CART CONTAINER BANNER.]
+		-- screen and (max-height: 320px) ##### [SMALLEST LANDSCAPE MOBILE PHONE VIEWPORTS]
+        -- screen and (max-width: 580px) ##### [SMALLER PORTRAIT MOBILE + SMALLEST LANDSCAPE MOBILE VIEWPORTS]
+		-- screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 768px)  and (orientation: portrait) ##### [ALL MOBILE PHONE VIEWPORTS]
 		-- screen and (min-width : 600px) and (max-width : 1023px) ##### [WIDER MOBILE PHONE/TABLET VIEWPORTS]
-		-- screen and (min-device-width: 800px) and (max-device-width: 1023px) and (orientation: landscape) ##### [LANDSCAPE TABLET VIEWPORTS]
-		-- screen and (max-width: 1023px) and (orientation: landscape), screen and (min-width: 600px) and (max-width: 1023px) and (orientation: portrait) ##### [LANDSCAPE MOBILE PHONE + ALL TABLET VIEWPORTS]
-		-- screen and (orientation: landscape) ##### [ALL LANDSCAPE VIEWPORTS]
+		-- screen and (min-width : 320px) and (max-width : 1023px) ##### [ALL MOBILE PHONE/TABLET VIEWPORTS]
+		-- screen and (orientation: landscape) and (max-device-width: 1023px) ##### [ALL LANDSCAPE VIEWPORTS]
+		-- screen and (min-device-width: 800px) and (max-device-width: 1023px) and (orientation: landscape) ##### [LANDSCAPE TABLET VIEWPORTS]	
+		
 -- MAIN CSS
 		-- HEADER SECTION
 		-- BODY SECTION
@@ -163,12 +166,40 @@ CONTENTS
 	
 /* CONTACT PAGE
 ========================================================================================== */
-	#contact-main-content, #contact-main-content #contact-form2 {
+	#contact-main-content, #contact-main-content #contact-form2, #contact-side-content {
 		flex-basis: 100% !important;
 	}
 	
-	#contact-side-content {
-		display: none;
+	.content #contact-main-content, body .content #contact-side-content {
+		height: auto;
+	}
+	
+	body #contact-side-content #gmaps-info2, body #contact-side-content #open-hours {
+		position: static;
+		width: 90%;
+	}
+	
+	.page-id-38 .entry {
+		overflow: scroll;
+		flex-wrap: wrap;
+	}
+	
+	.content #contact-main-content {
+		overflow: visible;
+		order: 2;
+	}
+	
+	.content #contact-side-content {
+		padding: 5vh 0;
+		order: 1;
+	}
+	
+	#gmaps-info2 {
+		margin: 0 auto 2.5% auto;
+	}
+	
+	#open-hours {
+		margin: auto;
 	}
 	
 /* WOOCOMMERCE CHECKOUT PAGE
@@ -190,17 +221,6 @@ CONTENTS
 		flex-wrap: wrap;
 	}
 
-/* WORDPRESS GENERAL
-========================================================================================== */
-	body #welcome {
-		padding-top: 22vh;
-	}
-	
-	html body > div.container {
-		padding-top: 22vh;
-	}
-
-	
 }
 
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
@@ -291,7 +311,7 @@ CONTENTS
 }
 
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
- * 															All Mobile Phone, Laptop + Landscape Tablet Viewports.																* 
+ * 															All Mobile Phone, Laptop + Landscape Tablet Viewports.														* 
  *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
 @media screen and (max-height: 799px) {
 /* HEADER SECTION
@@ -314,6 +334,28 @@ CONTENTS
 ========================================================================================== */	
 	#welcome {
 	padding-top: 14vh;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 											All Mobile Phone, Laptop + Landscape Tablet Viewports with a cart container banner.											* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-device-height: 799px) and (max-device-width: 801px) {
+/* WORDPRESS GENERAL
+========================================================================================== */	
+	body #welcome, html body > div.container {
+		padding-top: 22vh;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 										           Portrait Tablet Viewports with a cart container banner.			 													* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (min-device-height: 799px) and (max-device-width: 801px) {
+/* WORDPRESS GENERAL
+========================================================================================== */	
+	body #welcome, html body > div.container {
+		padding-top: 18vh;
 	}
 }
 
@@ -399,13 +441,18 @@ CONTENTS
 	}
 
 	.single-product .content #shop-back .back_button { 
-		flex-basis: 75%;
+		flex-basis: 85%;
 		text-align: center;
+		margin: auto;
 	}
 
 	.single-product .col-md-8 { 
 		padding-left: 0;
 		padding-right: 0;
+	}
+	
+	.single-product .container .content {
+		padding: 6vh 0;
 	}
 }	
 
