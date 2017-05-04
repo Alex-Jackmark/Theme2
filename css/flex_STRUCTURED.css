@@ -51,15 +51,19 @@ CONTENTS
 		display: flex;
 	}
 	
-	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, #navbar-toggle-container, .navbar #login, .navbar #login a,  .navbar .navbar-header #meta-container {
+	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, .navbar #login a, .navbar #login {
 		flex: 1;
+	}
+	
+	.navbar #navbar-toggle-container, .navbar .navbar-header #meta-container {
+		flex: 2;
 	}
 	
 	#cart-container, #menu-menu-1, #navbar-ex-collapse-child #menu-menu-1 li a, .navbar #login {
 		flex-direction: column;
 	}
 	
-	#navbar-ex-collapse-child, #menu-menu-1 li, #cart-container {
+	#navbar-ex-collapse-child, #menu-menu-1 li, #cart-container, #meta-container #meta-subContainer {
 		width: 100%;
 	}
 	
@@ -79,6 +83,10 @@ CONTENTS
 	#cart-container, #menu-menu-1 { 
 		flex-wrap: wrap;
 	}
+	
+	#navbar-toggle-container, #meta-subContainer { 
+		z-index: 1; 
+	}
 
 	#menu-menu-1 li {
 		border-bottom: 1px solid #292929;	
@@ -90,11 +98,6 @@ CONTENTS
 	
 	#navbar-ex-collapse-child #menu-menu-1 li a {
 		justify-content: center;
-		
-	}
-	
-	#navbar-toggle-container { 
-		z-index: 1; 
 	}
 	
 	button.navbar-toggle.collapsedLarge { 
@@ -110,13 +113,17 @@ CONTENTS
 		margin: auto 5vw;
 	}
 	
-	#meta-subContainer { 			
-		height: 33vh; 					
+	#meta-container #meta-subContainer { 			
+		height: 33vh; 
 	} 									
 	
 	#meta-subContainer.dropped {	     
 		position: absolute;		   		  	 			    	
-	}							   		
+	}
+
+	.navbar #meta-container {
+		position: relative;
+	}
 	
 /* WOOCOMMERCE SHOP PAGE
 ========================================================================================== */
@@ -276,9 +283,9 @@ CONTENTS
 @media screen and (max-height: 799px) {
 /* HEADER SECTION
 ========================================================================================== */	
-	#cart-container { 
+	/*#cart-container { 
 		top: 14vh;
-	}
+	}*/
 	
 	nav.navbar { 
 		height: 14vh;
@@ -611,6 +618,7 @@ CONTENTS
 
 #meta-container .myAccountItem a, #meta-container .logOutItem a, #login a{
 	background-color: #eee;
+	text-align: center;
 }
 
 .navbar-header, #meta-container, #login a {
