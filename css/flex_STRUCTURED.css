@@ -170,7 +170,7 @@ CONTENTS
 		flex-basis: 100% !important;
 	}
 	
-	.content #contact-main-content, body .content #contact-side-content {
+	body .content #contact-main-content, body .content #contact-side-content {
 		height: auto;
 	}
 	
