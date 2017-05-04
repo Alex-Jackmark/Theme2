@@ -1,6 +1,8 @@
 jQuery(document).ready(function () {
 	jQuery("#userMenuCollapse").click(function () {
-		//jQuery("#cart-container").toggle();
+		if (jQuery(window).width() >= 801){	
+			jQuery(".cart-container").toggleClass("hide");
+		}	
 		jQuery("#meta-container").toggleClass("collapsedSmall");
 		jQuery("#meta-subContainer").toggleClass("dropped");
 		jQuery(".fa:first").toggleClass("fa-chevron-up");
