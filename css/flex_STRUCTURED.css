@@ -194,11 +194,11 @@ CONTENTS
 		order: 1;
 	}
 	
-	#gmaps-info2 {
+	body #contact-side-content #gmaps-info2 {
 		margin: 0 auto 2.5% auto;
 	}
 	
-	#open-hours {
+	body #contact-side-content #open-hours {
 		margin: auto;
 	}
 	
