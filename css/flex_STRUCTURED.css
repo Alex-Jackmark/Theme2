@@ -107,6 +107,7 @@ CONTENTS
 	.cart-container { 
 		border: 1px solid black;
 		background-color: #c5c57c;
+		height: 8vh;
 	}
 	
 	.cart-container #cart-contents #subtotal {
@@ -188,6 +189,18 @@ CONTENTS
 		display: flex;
 		flex-wrap: wrap;
 	}
+
+/* WORDPRESS GENERAL
+========================================================================================== */
+	body #welcome {
+		padding-top: 22vh;
+	}
+	
+	html body > div.container {
+		padding-top: 22vh;
+	}
+
+	
 }
 
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
