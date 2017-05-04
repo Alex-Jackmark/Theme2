@@ -47,15 +47,15 @@ CONTENTS
 		border-right: 0;
 	}
 	
-	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-menu-1 li, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, #navbar-toggle-container {
+	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-menu-1 li, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, #navbar-toggle-container, .navbar #login {
 		display: flex;
 	}
 	
-	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, #navbar-toggle-container {
+	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, #navbar-toggle-container, .navbar #login, .navbar #login a {
 		flex: 1;
 	}
 	
-	#cart-container, #menu-menu-1, #navbar-ex-collapse-child #menu-menu-1 li a {
+	#cart-container, #menu-menu-1, #navbar-ex-collapse-child #menu-menu-1 li a, .navbar #login {
 		flex-direction: column;
 	}
 	
@@ -190,6 +190,10 @@ CONTENTS
 
 /* HEADER SECTION
 ========================================================================================== */	
+	.products .product, .woocommerce-result-count, .woocommerce-ordering, .woocommerce-ordering .orderby { 
+		width: 100% !important; 
+	}  
+	
 	nav.navbar-fixed-top #meta-container #login, nav.navbar-fixed-top #meta-container #login a {
 		margin: 0;
 	}
@@ -209,6 +213,10 @@ CONTENTS
 	.tester #usernameContainer {
 		text-align: center;
 	}
+	
+	.products .product {   
+		margin: 5% auto !important; 
+	}   
 
 	
 /* WOOCOMMERCE SHOP PAGE
@@ -862,10 +870,10 @@ body .container .row {
 }
 
 .products .product {            
-	width: 20% !important;	   
-	margin: 2% !important; 
-	padding-bottom: 2vh !important; 
-}   
+	width: 20%;	   
+	margin: 2%; 
+	padding-bottom: 2vh; 
+}  
 
 .woocommerce.archive .col-md-8 span {
 	color: white;
