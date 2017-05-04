@@ -283,9 +283,9 @@ CONTENTS
 @media screen and (max-height: 799px) {
 /* HEADER SECTION
 ========================================================================================== */	
-	/*#cart-container { 
+	#cart-container, #meta-container #meta-subContainer { 
 		top: 14vh;
-	}*/
+	}
 	
 	nav.navbar { 
 		height: 14vh;
