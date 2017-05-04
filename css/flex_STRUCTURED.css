@@ -51,7 +51,7 @@ CONTENTS
 		display: flex;
 	}
 	
-	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, #navbar-toggle-container, .navbar #login, .navbar #login a {
+	#navbar-ex-collapse-child.collapse-child.collapse.in, #menu-item-231, #navbar-ex-collapse-child #menu-menu-1 li a, #navbar-toggle-container, .navbar #login, .navbar #login a,  .navbar .navbar-header #meta-container {
 		flex: 1;
 	}
 	
