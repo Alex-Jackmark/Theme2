@@ -12,8 +12,9 @@ CONTENTS
         -- screen and (max-width: 580px) ##### [SMALLER PORTRAIT MOBILE + SMALLEST LANDSCAPE MOBILE VIEWPORTS]
 		-- screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 768px)  and (orientation: portrait) ##### [ALL MOBILE PHONE VIEWPORTS]
 		-- screen and (min-width : 600px) and (max-width : 1023px) ##### [WIDER MOBILE PHONE/TABLET VIEWPORTS]
-		-- screen and (min-width : 320px) and (max-width : 1023px) ##### [ALL MOBILE PHONE/TABLET VIEWPORTS]
-		-- screen and (orientation: landscape) and (max-device-width: 1023px) ##### [ALL LANDSCAPE VIEWPORTS]
+		-- screen and (min-width : 320px) and (max-width : 1024px) ##### [ALL MOBILE PHONE/TABLET VIEWPORTS]
+		-- screen and (orientation: landscape) and (max-device-width: 1024px) ##### [ALL LANDSCAPE VIEWPORTS]
+		-- screen and (orientation: portrait) and (max-device-width: 1024px) ##### [ALL PORTRAIT VIEWPORTS]
 		-- screen and (min-device-width: 800px) and (max-device-width: 1023px) and (orientation: landscape) ##### [LANDSCAPE TABLET VIEWPORTS]	
 		
 -- MAIN CSS
@@ -559,7 +560,7 @@ CONTENTS
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
  * 																All Mobile Phone/Tablet Viewports.																		* 
  *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
-@media screen and (min-width : 320px) and (max-width : 1023px) { 
+@media screen and (min-width : 320px) and (max-width : 1024px) { 
 /* WOOCOMMERCE SHOP ITEM PAGE
 ========================================================================================== */
 	.single-product .single_add_to_cart_button { 
@@ -577,18 +578,70 @@ CONTENTS
 	#wp-submit { 
 		padding: 3vh 12vw !important;
 	}
+	
+/* WOOCOMMERCE CHECKOUT PAGE 
+========================================================================================== */		
+	#ship-to-different-address .checkbox .input-checkbox, .woocommerce-validated .checkbox .input-checkbox, .woocommerce-validated .checkbox span, #ship-to-different-address .checkbox span {
+		margin: auto;
+	}
+	
+	#ship-to-different-address .checkbox .input-checkbox, .woocommerce-validated .checkbox .input-checkbox, .woocommerce-validated .checkbox span {
+		flex-basis: 100%;
+	}
+	
+	.woocommerce-validated .checkbox span, #ship-to-different-address .checkbox span {
+		text-align: center;
+		color: grey;
+	}
+	
+	.woocommerce-validated .checkbox, #ship-to-different-address .checkbox {
+		border: 1px solid black;
+		background-color: #eee;
+		padding: 2% 0;
+		flex-wrap: wrap;
+	}
+	
+	.woocommerce-validated, .woocommerce-validated .checkbox, #ship-to-different-address, #ship-to-different-address .checkbox {
+		width: 100%;
+	}
+
+	.woocommerce-validated .checkbox span {
+		font-size: 24px;
+		line-height: 1.1;
+	}
+	
+	#ship-to-different-address .checkbox {
+		display: flex;
+	}
 }
 
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
  * 															All Landscape Viewports up to laptops/desktops.																			* 
  *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
-@media screen and (orientation: landscape) and (max-device-width: 1023px) { 
+@media screen and (orientation: landscape) and (max-device-width: 1024px) { 
 /* THEME-MY-LOGIN LOGIN PAGE
 ========================================================================================== */
 	.page-id-468 #theme-my-login {
 		width: 75%;
 	}
 }
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 															All Portrait Viewports up to laptops/desktops.																			* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (orientation: portrait) and (max-device-width: 1024px) { 
+/* WOOCOMMERCE ORDER RECEIVED PAGE
+========================================================================================== */
+	body.woocommerce-order-received .woocommerce {
+		flex-basis: 100%;
+		margin: 0;
+	}
+	
+	body.woocommerce-order-received .woocommerce .woocommerce-order .woocommerce-order-details { /* MOVE TO ALL PHONES/TABLETS */
+		padding: 3% !important;
+	}
+}
+
 
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
  * 																  Landscape Tablet Viewports.																			* 
