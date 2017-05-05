@@ -4,18 +4,18 @@ CONTENTS
 -- RESPONSIVE (MEDIA QUERIES) 
 		-- screen and (max-width: 801px) ##### [DEFAULT CSS FOR ALL VIEWPORTS UP TO PORTRAIT LARGE TABLETS]
 		-- screen and (max-width: 414px) and (orientation: portrait) ##### [PORTRAIT MOBILE PHONE VIEWPORTS]
-		-- screen and (max-width: 1023px) and (orientation: landscape), screen and (min-width: 600px) and (max-width: 1023px) and (orientation: portrait) ##### [LANDSCAPE MOBILE PHONE + ALL TABLET VIEWPORTS]		
+		-- screen and (min-width: 600px) and (max-width: 800px) and (orientation: portrait) ##### [ALL PORTRAIT TABLET VIEWPORTS]		
 		-- screen and (max-height: 799px) ##### [ALL MOBILE PHONE, LAPTOP + LANDSCAPE TABLET VIEWPORTS]
 		-- screen and (max-device-height: 799px) and (max-device-width: 801px) ##### [ALL MOBILE PHONE, LAPTOP + LANDSCAPE TABLET VIEWPORTS WITH A CART CONTAINER BANNER.]
 		-- screen and (min-device-height: 799px) and (max-device-width: 801px) ##### [PORTRAIT TABLET VIEWPORTS WITH A CART CONTAINER BANNER.]
 		-- screen and (max-height: 320px) ##### [SMALLEST LANDSCAPE MOBILE PHONE VIEWPORTS]
         -- screen and (max-width: 580px) ##### [SMALLER PORTRAIT MOBILE + SMALLEST LANDSCAPE MOBILE VIEWPORTS]
 		-- screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 768px)  and (orientation: portrait) ##### [ALL MOBILE PHONE VIEWPORTS]
-		-- screen and (min-width : 600px) and (max-width : 1023px) ##### [WIDER MOBILE PHONE/TABLET VIEWPORTS]
+		-- screen and (min-width : 600px) and (max-width : 1024px) ##### [WIDER MOBILE PHONE/TABLET VIEWPORTS]
 		-- screen and (min-width : 320px) and (max-width : 1024px) ##### [ALL MOBILE PHONE/TABLET VIEWPORTS]
 		-- screen and (orientation: landscape) and (max-device-width: 1024px) ##### [ALL LANDSCAPE VIEWPORTS]
 		-- screen and (orientation: portrait) and (max-device-width: 1024px) ##### [ALL PORTRAIT VIEWPORTS]
-		-- screen and (min-device-width: 800px) and (max-device-width: 1023px) and (orientation: landscape) ##### [LANDSCAPE TABLET VIEWPORTS]	
+		-- screen and (min-device-width: 800px) and (max-device-width: 1024px) and (orientation: landscape) ##### [LANDSCAPE TABLET VIEWPORTS]	
 		
 -- MAIN CSS
 		-- HEADER SECTION
@@ -301,9 +301,9 @@ CONTENTS
 }
 
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
- * 																Landscape Mobile Phone + All Tablet Viewports.															* 
+ * 																     All Portrait Tablet Viewports.																		* 
  *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
-@media screen and (max-width: 1023px) and (orientation: landscape), screen and (min-width: 600px) and (max-width: 1023px) and (orientation: portrait) { /*    */
+@media screen and (min-width: 600px) and (max-width: 800px) and (orientation: portrait) { /*    */
 /* THEME-MY-LOGIN LOGIN PAGE
 ========================================================================================== */
 	body #theme-my-login {
@@ -528,7 +528,7 @@ CONTENTS
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
  * 																	Wider Mobile Phone/Tablet Viewports.																* 
  *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
-@media screen and (min-width : 600px) and (max-width : 1023px) { 
+@media screen and (min-width : 600px) and (max-width : 1024px) { 
 /* WOOCOMMERCE SHOP ITEM PAGE
 ========================================================================================== */
 	.single-product .content #shop-back a.back_button {
@@ -613,6 +613,12 @@ CONTENTS
 	#ship-to-different-address .checkbox {
 		display: flex;
 	}
+	
+/* WOOCOMMERCE ORDER RECEIVED PAGE
+========================================================================================== */	
+	body.woocommerce-order-received .woocommerce .woocommerce-order .woocommerce-order-details {
+		padding: 3% !important;
+	}
 }
 
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
@@ -636,17 +642,13 @@ CONTENTS
 		flex-basis: 100%;
 		margin: 0;
 	}
-	
-	body.woocommerce-order-received .woocommerce .woocommerce-order .woocommerce-order-details { /* MOVE TO ALL PHONES/TABLETS */
-		padding: 3% !important;
-	}
 }
 
 
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
  * 																  Landscape Tablet Viewports.																			* 
  *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
-@media screen and (min-device-width: 800px) and (max-device-width: 1023px) and (orientation: landscape) {
+@media screen and (min-device-width: 800px) and (max-device-width: 1024px) and (orientation: landscape) {
 /* WOOCOMMERCE GENERAL 
 ========================================================================================== */	
 	.woocommerce-account.logged-in .container:before { 
