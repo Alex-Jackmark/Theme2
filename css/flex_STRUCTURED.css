@@ -6,11 +6,12 @@ CONTENTS
 		-- screen and (max-width: 414px) and (orientation: portrait) ##### [PORTRAIT MOBILE PHONE VIEWPORTS]
 		-- screen and (min-width: 600px) and (max-width: 800px) and (orientation: portrait) ##### [ALL PORTRAIT TABLET VIEWPORTS]		
 		-- screen and (max-height: 799px) ##### [ALL MOBILE PHONE, LAPTOP + LANDSCAPE TABLET VIEWPORTS]
-		-- screen and (max-device-height: 799px) and (max-device-width: 801px) ##### [ALL MOBILE PHONE, LAPTOP + LANDSCAPE TABLET VIEWPORTS WITH A CART CONTAINER BANNER.]
+		-- screen and (max-device-height: 799px) and (max-device-width: 801px) and (orientation: portrait) ##### [ALL PORTRAIT MOBILE PHONE VIEWPORTS WITH A CART CONTAINER BANNER.]
+		-- screen and (max-device-height: 799px) and (max-device-width: 801px) and (orientation: landscape) [ALL LANDSCAPE MOBILE PHONE AND LANDSCAPE TABLET VIEWPORTS WITH A CART CONTAINER BANNER.]
 		-- screen and (min-device-height: 799px) and (max-device-width: 801px) ##### [PORTRAIT TABLET VIEWPORTS WITH A CART CONTAINER BANNER.]
 		-- screen and (max-height: 320px) ##### [SMALLEST LANDSCAPE MOBILE PHONE VIEWPORTS]
         -- screen and (max-width: 580px) ##### [SMALLER PORTRAIT MOBILE + SMALLEST LANDSCAPE MOBILE VIEWPORTS]
-		-- screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 768px)  and (orientation: portrait) ##### [ALL MOBILE PHONE VIEWPORTS]
+		-- screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 767px)  and (orientation: portrait) ##### [ALL MOBILE PHONE VIEWPORTS]
 		-- screen and (min-width : 600px) and (max-width : 1024px) ##### [WIDER MOBILE PHONE/TABLET VIEWPORTS]
 		-- screen and (min-width : 320px) and (max-width : 1024px) ##### [ALL MOBILE PHONE/TABLET VIEWPORTS]
 		-- screen and (orientation: landscape) and (max-device-width: 1024px) ##### [ALL LANDSCAPE VIEWPORTS]
@@ -221,9 +222,19 @@ CONTENTS
 		display: flex;
 		flex-wrap: wrap;
 	}
-
 }
 
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 													     	Landscape Viewports with cart container banner																* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-width: 801px) and (orientation: landscape) { 
+	
+/* HEADER SECTION
+======================================================================================================================================================================== */
+	div.cart-container { 
+		height: 15vh;
+	}
+}
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
  * 																	Portrait Mobile Phone Viewports.																	* 
  *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
@@ -339,13 +350,24 @@ CONTENTS
 }
 
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
- * 											All Mobile Phone, Laptop + Landscape Tablet Viewports with a cart container banner.											* 
+ * 											All Portrait Mobile Phone Viewports with a cart container banner.											* 
  *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
-@media screen and (max-device-height: 799px) and (max-device-width: 801px) {
+@media screen and (max-device-height: 799px) and (max-device-width: 801px) and (orientation: portrait) {
 /* WORDPRESS GENERAL
 ========================================================================================== */	
 	body #welcome, html body > div.container {
 		padding-top: 22vh;
+	}
+}
+
+/*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
+ * 											All Landscape Mobile Phone and Landscape Tablet Viewports with a cart container banner.										* 
+ *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
+@media screen and (max-device-height: 799px) and (max-device-width: 801px) and (orientation: landscape) {
+/* WORDPRESS GENERAL
+========================================================================================== */	
+	body #welcome, html body > div.container {
+		padding-top: 29vh;
 	}
 }
 
@@ -357,6 +379,10 @@ CONTENTS
 ========================================================================================== */	
 	body #welcome, html body > div.container {
 		padding-top: 18vh;
+	}
+	
+	.cart-container { 
+		top: 10vh;
 	}
 }
 
@@ -400,10 +426,6 @@ CONTENTS
 	.woocommerce-checkout .woocommerce .woocommerce-billing-fields #billing_email_field, .woocommerce-checkout .woocommerce .woocommerce-billing-fields #billing_phone_field, #createaccount { 
 		width: 100%; 
 	}	
-	
-	.woocommerce-checkout .woocommerce #customer_details {
-		padding: 0 5%; 
-	}
 	
 	#createaccount {
 		border: 0px; 
@@ -460,7 +482,7 @@ CONTENTS
 /*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 	*
  * 																	All Mobile Phone Viewports.																			* 
  *	------------------------------------------------------------------------------------------------------------------------------------------------------------------	*/
-@media screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 768px)  and (orientation: portrait){
+@media screen and (max-width: 770px)  and (orientation: landscape), screen and (max-width: 767px)  and (orientation: portrait){
 /* WOOCOMMERCE GENERAL
 ========================================================================================== */
 	.logged-in div.woocommerce {
@@ -522,6 +544,27 @@ CONTENTS
 ========================================================================================== */	
 	.woocommerce table.shop_table {
 		border-radius: 0;
+	}
+	
+/* WOOCOMMERCE CHECKOUT PAGE 
+========================================================================================== */		
+	body.woocommerce-checkout .woocommerce {
+		flex-basis: 100%;
+		margin: 0;
+	}
+	
+	body.woocommerce-checkout #payment {
+		border-radius: 0;
+	}
+	
+	.woocommerce-checkout .woocommerce #customer_details {
+		padding: 0 5%; 
+	}
+	
+	#order_review_heading, .woocommerce-billing-fields > h3 {
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
 	}
 }
 
@@ -1439,6 +1482,42 @@ body.woocommerce-checkout #payment #place_order:hover, body.woocommerce-checkout
 .woocommerce-checkout .checkbox input[type=checkbox] {
 	position: static;
 }
+
+body.woocommerce-checkout textarea[name=order_comments] {
+	resize: none;
+	height: 10vh;
+}
+
+#table1 {
+	margin-bottom: 8vh;
+}
+
+#table1 thead, #table2 th {
+	background-color: grey;
+	color: white;
+}
+
+body.woocommerce-checkout #table1 .product-name, #table2 th {
+	border-right: 2px solid black;
+}
+
+#table1 tbody, #table2 tr td {
+	background-color: white;
+}
+
+#table1 .product-name {
+	border-right: 2px solid grey;
+	width: 50%;
+}
+
+#table2 .cart-subtotal th, #table2 .shipping th, #table2 .tax-rate th, #table1 thead th {
+	border-bottom: 1px solid black;
+}
+
+body.woocommerce-checkout .woocommerce table {
+	border: 1px solid rgba(0, 0, 0, 1);
+}
+	
 
 /* WOOCOMMERCE ORDER RECEIVED PAGE (MAIN)
 ==================================================================================================================================================================================== */	
