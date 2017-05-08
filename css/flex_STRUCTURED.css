@@ -32,6 +32,7 @@ CONTENTS
 		-- WOOCOMMERCE ORDER RECEIVED PAGE
 		-- THEME-MY-LOGIN LOGIN PAGE
 		-- CONTACT PAGE
+		-- SHOWCASE PAGE
 		-- WORDPRESS GENERAL
 		-- RECAPTCHA
 
@@ -221,6 +222,14 @@ CONTENTS
 	.woocommerce-checkout .form-row {
 		display: flex;
 		flex-wrap: wrap;
+	}
+	
+/* SHOWCASE PAGE
+========================================================================================== */
+	body.page-id-124 video {
+		width: 100%;
+		height: 75%;
+		margin-bottom: 2vh;
 	}
 }
 
@@ -1842,6 +1851,33 @@ div.tml .tml-action-links li a:hover, div.tml .tml-action-links li a:focus {
 #cscf_message {
 	resize: none;
 }
+
+/* SHOWCASE PAGE (MAIN)
+========================================================================================== */
+.page-id-124 .entry {
+	flex-wrap: wrap;
+}
+
+.page-id-124 .content {
+	padding: 6vh 5%;
+}
+
+#vidContainer, #vidContainer2, #vidContainer3 {
+	flex-basis: 100%;
+	height: 30%;
+	display: flex;
+}
+
+#vidContainer2 {
+	justify-content: flex-end;
+}
+
+.page-id-124 video {
+	width: 39%;
+	height: 100%;
+	max-height: 100%;
+}
+
 
 /* WORDPRESS GENERAL (MAIN)
 ==================================================================================================================================================================================== */
