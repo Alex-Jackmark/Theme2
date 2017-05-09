@@ -78,7 +78,7 @@ add_action( 'woocommerce_before_single_product', 'woocommerce_single_product_sum
 function woocommerce_single_product_summary_button() {
 	$shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
 	echo '<div id="shop-back">
-		       <a class="back_button" href="' . $shop_page_url . '">Back to Shop</a>
+		       <a class="back_button" href="' . $shop_page_url . '">Back to All Products</a>
 		  </div>';
 }
 
@@ -103,6 +103,52 @@ function add_loginout_link( $items, $args ) {
 add_filter( 'lostpassword_url', 'my_lost_password_page', 10, 2 );
 function my_lost_password_page( $lostpassword_url, $redirect ) {
     return home_url( '/lostpassword/?redirect_to=' . $redirect );
+}
+
+// Change the "add to cart" buttton text on Woocommerce single product pages.
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
+ 
+function woo_custom_cart_button_text() {
+ 
+        return __( 'Request Product', 'woocommerce' );
+ 
+}
+
+//Change the "add to cart" button text on Woocommerce product archives.
+add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );    // 2.1 +
+ 
+function woo_archive_custom_cart_button_text() {
+ 
+        return __( 'Request Product', 'woocommerce' );
+ 
+}
+
+//Change the "Proceed to Checkout" button text on the Woocommerce cart page.
+function woocommerce_button_proceed_to_checkout() {
+       $checkout_url = WC()->cart->get_checkout_url();
+       ?>
+       <a href="<?php echo $checkout_url; ?>" class="checkout-button button alt wc-forward"><?php _e( 'Proceed to Billing and Shipping', 'woocommerce' ); ?></a>
+       <?php
+}
+
+// Change the "Place Order" button text on the Woocommerce checkout page.
+add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' ); 
+
+function woo_custom_order_button_text() {
+    return __( 'Enquire', 'woocommerce' ); 
+}
+
+// Change the "add to cart" woocommerce message text.
+add_filter('wc_add_to_cart_message', 'handler_function_name', 10, 2);
+function handler_function_name($message, $product_id) {
+//    return $product_id . "added to enquiry list.";
+}
+
+add_filter('add_to_cart_redirect', 'themeprefix_add_to_cart_redirect');
+function themeprefix_add_to_cart_redirect() {
+ global $woocommerce;
+ $checkout_url = $woocommerce->cart->get_checkout_url();
+ return $checkout_url;
 }
 
 ?>
